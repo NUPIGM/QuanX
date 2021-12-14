@@ -1,0 +1,61 @@
+# Apple
+HOST-SUFFIX,aaplimg.com,Apple
+HOST-SUFFIX,apple.co,Apple
+HOST-SUFFIX,apple.com,Apple
+HOST-SUFFIX,apple.com.cn,Apple
+HOST-SUFFIX,apple-cloudkit.com,Apple
+HOST-SUFFIX,appstore.com,Apple
+HOST-SUFFIX,cdn-apple.com,Apple
+HOST-SUFFIX,icloud.com,Apple
+HOST-SUFFIX,icloud.com.cn,Apple
+HOST-SUFFIX,icloud-content.com,Apple
+HOST-SUFFIX,me.com,Apple
+HOST-SUFFIX,mzstatic.com,Apple
+HOST-KEYWORD,apple.com.akadns.net,Apple
+HOST-KEYWORD,icloud.com.akadns.net,Apple
+IP-CIDR,17.0.0.0/8,Apple
+IP-CIDR,63.92.224.0/19,Apple
+IP-CIDR,65.199.22.0/23,Apple
+IP-CIDR,139.178.128.0/18,Apple
+IP-CIDR,144.178.0.0/19,Apple
+IP-CIDR,192.35.50.0/24,Apple
+IP-CIDR,198.183.17.0/24,Apple
+IP-CIDR,205.180.175.0/24,Apple
+
+# ---(Apple)---
+HOST-SUFFIX,appsto.re,PROXY
+HOST,books.itunes.apple.com,PROXY
+HOST-SUFFIX,smoot.apple.com,PROXY
+HOST,beta.music.apple.com,PROXY
+HOST,lookup-api.apple.com,PROXY
+# > Web Preview
+HOST,apps.apple.com,PROXY
+HOST,books.apple.com,PROXY
+HOST,itunes.apple.com,PROXY
+HOST,tv.apple.com,PROXY
+# > Podcasts
+HOST,amp-api.podcasts.apple.com,PROXY
+HOST,bookkeeper.itunes.apple.com,PROXY
+# > News
+HOST,gateway.icloud.com,PROXY
+HOST-SUFFIX,apple.news,PROXY
+HOST,news-assets.apple.com,PROXY
+HOST,news-client.apple.com,PROXY
+HOST,news-client-search.apple.com,PROXY
+HOST,news-edge.apple.com,PROXY
+HOST,news-events.apple.com,PROXY
+HOST,apple.comscoreresearch.com,PROXY
+
+# > Apple
+HOST,testflight.apple.com,PROXY
+
+# > Apple TV
+HOST,linear.tv.apple.com,Streaming
+HOST,play-edge.itunes.apple.com,Streaming
+HOST,uts-api.itunes.apple.com,Streaming
+
+# > Apple
+HOST,appleid.apple.com,PROXY
+HOST,developer.apple.com,PROXY
+HOST,www.icloud.com,PROXY
+HOST,ocsp.apple.com,PROXY

@@ -1,0 +1,9 @@
+# > Microsoft
+HOST-SUFFIX,aka.ms,PROXY
+HOST-SUFFIX,onedrive.live.com,PROXY
+HOST-SUFFIX,streaming.mediaservices.windows.net,PROXY
+HOST-SUFFIX,hotmail.com,PROXY
+HOST,assets1.xboxlive.com,PROXY
+HOST,assets2.xboxlive.com,PROXY
+HOST,az416426.vo.msecnd.net,PROXY
+HOST,az668014.vo.msecnd.net,PROXY
