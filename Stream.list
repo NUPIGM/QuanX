@@ -1,4 +1,4 @@
-# Streaming Media
+ï»¿# Streaming Media
 
 # (Live)
 # > Twitch
@@ -161,7 +161,7 @@ HOST,hbolb.onwardsmg.com,Streaming
 HOST,hbounify-prod.evergent.com,Streaming
 HOST,players.brightcove.net,Streaming
 HOST,s3-ap-southeast-1.amazonaws.com,Streaming
-# > »ªÎÄµçÊÓ
+# > åæ–‡ç”µè§†
 USER-AGENT,HWTVMobile*,Streaming
 HOST-SUFFIX,5itv.tv,Streaming
 HOST-SUFFIX,ocnttv.com,Streaming
@@ -169,7 +169,7 @@ HOST-SUFFIX,ocnttv.com,Streaming
 HOST-SUFFIX,hulu.com,Streaming
 HOST-SUFFIX,huluim.com,Streaming
 HOST-SUFFIX,hulustream.com,Streaming
-# > Hulu / ¥Õ©`¥ë©`
+# > Hulu / ãƒ•ãƒ¼ãƒ«ãƒ¼
 HOST-SUFFIX,happyon.jp,Streaming
 HOST-SUFFIX,hjholdings.jp,Streaming
 HOST-SUFFIX,hulu.jp,Streaming
@@ -211,7 +211,7 @@ HOST,d3c7rimkq79yfu.cloudfront.net,Streaming
 # > LiTV
 HOST-SUFFIX,litv.tv,Streaming
 HOST,litvfreemobile-hichannel.cdn.hinet.net,Streaming
-# > MangoTV(Ã¢¹ûTV¹ú¼Ê)
+# > MangoTV(èŠ’æœTVå›½é™…)
 HOST-SUFFIX,api.mgtv.com,Streaming
 HOST,mobileso.bz.mgtv.com,Streaming
 # > My5
@@ -257,7 +257,7 @@ HOST-SUFFIX,phncdn.com,Streaming
 HOST-SUFFIX,phprcdn.com,Streaming
 HOST-SUFFIX,pornhub.com,Streaming
 HOST-SUFFIX,pornhubpremium.com,Streaming
-# > Ì¨ÍåºÃ
+# > å°æ¹¾å¥½
 USER-AGENT,TaiwanGood*,Streaming
 HOST-SUFFIX,skyking.com.tw,Streaming
 HOST,hamifans.emome.net,Streaming

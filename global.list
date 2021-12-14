@@ -1,4 +1,4 @@
-# (DNS Cache Pollution)
+﻿# (DNS Cache Pollution)
 # > Amazon
 HOST-SUFFIX,amazon.co.jp,PROXY
 HOST,d3c33hcgiwev3.cloudfront.net,PROXY
