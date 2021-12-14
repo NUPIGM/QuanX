@@ -161,7 +161,7 @@ HOST,hbolb.onwardsmg.com,Streaming
 HOST,hbounify-prod.evergent.com,Streaming
 HOST,players.brightcove.net,Streaming
 HOST,s3-ap-southeast-1.amazonaws.com,Streaming
-# > 华文电视
+# > hua wen TV
 USER-AGENT,HWTVMobile*,Streaming
 HOST-SUFFIX,5itv.tv,Streaming
 HOST-SUFFIX,ocnttv.com,Streaming
