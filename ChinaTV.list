@@ -1,0 +1,65 @@
+# (Video)
+# > Acfun
+HOST-SUFFIX,acfun.cn,PROXY
+HOST-SUFFIX,aixifan.com,PROXY
+# > bilibili
+HOST-SUFFIX,biliapi.net,PROXY
+HOST-SUFFIX,bilibili.com,PROXY
+HOST-SUFFIX,bilivideo.com,PROXY
+HOST-SUFFIX,hdslb.com,PROXY
+# > Tencent Video
+HOST-SUFFIX,video.qq.com,PROXY
+HOST-SUFFIX,i.qq.com,PROXY
+HOST-SUFFIX,v.qq.com,PROXY
+# > iQiyi
+HOST-SUFFIX,iqiyi.com,PROXY
+HOST-SUFFIX,71edge.com,PROXY
+# > Youku
+HOST-SUFFIX,soku.com,PROXY
+HOST-SUFFIX,youku.com,PROXY
+HOST-SUFFIX,ykimg.com,PROXY
+# > XiGua
+HOST-SUFFIX,ixigua.com,PROXY
+HOST-SUFFIX,snssdk.com,PROXY
+# > HunanTV
+HOST-SUFFIX,hitv.com,PROXY
+HOST-SUFFIX,hunantv.com,PROXY
+HOST-SUFFIX,mgtv.com,PROXY
+# > Le
+HOST-SUFFIX,le.com,PROXY
+# > PPLive
+HOST-SUFFIX,pplive.cn,PROXY
+HOST-SUFFIX,pptv.com,PROXY
+# > Sohu Video
+HOST-SUFFIX,itc.cn,PROXY
+HOST-SUFFIX,sohu.com,PROXY
+# > Migu Video
+HOST-SUFFIX,cmvideo.cn,PROXY
+HOST-SUFFIX,miguvideo.com,PROXY
+
+# (Music)
+# > QQ Music
+HOST-SUFFIX,music.qq.com,PROXY
+HOST-SUFFIX,music.tc.qq.com,PROXY
+HOST-SUFFIX,qqmusic.qq.com,PROXY
+HOST-SUFFIX,tencentmusic.com,PROXY
+HOST-SUFFIX,y.qq.com,PROXY
+HOST,aqqmusic.tc.qq.com,PROXY
+HOST,moo.qq.com,PROXY
+# > China Music Corp
+HOST-SUFFIX,kuwo.cn,PROXY
+HOST-SUFFIX,kugou.com,PROXY
+# > Netease Cloud Music
+HOST-SUFFIX,music.163.com,PROXY
+HOST-SUFFIX,music.126.net,PROXY
+HOST,mam.netease.com,PROXY
+HOST,api.iplay.163.com,PROXY
+# > Qianqian Music
+HOST-SUFFIX,qianqian.com,PROXY
+HOST-SUFFIX,taihe.com,PROXY
+# > Migu Music
+HOST-SUFFIX,migu.cn,PROXY
+# > Xiaomi
+HOST-SUFFIX,ai.xiaomi.com,PROXY
+HOST-SUFFIX,music.xiaomi.com,PROXY
+HOST-SUFFIX,dmhmusic.com,PROXY

@@ -1,0 +1,12 @@
+# > YouTube
+USER-AGENT,com.google.ios.youtube*,YouTube
+USER-AGENT,YouTube*,YouTube
+HOST-SUFFIX,googlevideo.com,YouTube
+HOST-SUFFIX,youtube.com,YouTube
+HOST-SUFFIX,ytimg.com,YouTube
+HOST,youtubei.googleapis.com,YouTube
+HOST,yt3.ggpht.com,YouTube
+
+# > YouTubeMusic
+USER-AGENT,com.google.ios.youtubemusic*,Streaming
+USER-AGENT,YouTubeMusic*,Streaming
