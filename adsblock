@@ -1,0 +1,3 @@
+hostname = *.btbdys.com
+#www.btbdys.com adsblock
+^https:?/\/\b..+qhdhn.\w{2,3}\b.* url response-body data-v-1c096ede response-body style="display:none"
