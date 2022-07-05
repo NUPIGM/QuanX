@@ -1,3 +1,6 @@
-hostname = *.baidu.com
-#www.baidu.com adsblock
+hostname = *.baidu.com, *.github.com
+#baidu.com adsblock
 ^https:?/\/(.?)+\bbaidu\b.\w{2,3}.* url response-body id="logo" response-body id="logo" style="display:none"
+
+#github.com translate
+^https:?/\/(.?)+\bgithub\b.\w{2,3}.*  url response-body </head> response-body <script type="text/javascript" nonce="7575a050f63648a69e15f9694a7" src="https://raw.githubusercontent.com/k1995/github-i18n-plugin/master/userscript.js"></script></head>
