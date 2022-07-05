@@ -1,3 +1,3 @@
 hostname = *.baidu.com
 #www.baidu.com adsblock
-^https:?/\/(.?)+\bpianku\b.\w{2,3}.* url response-body id="lg" response-body id="lg" style="display:none"
+^https:?/\/(.?)+\bpianku\b.\w{2,3}.* url response-body id="logo" response-body id="logo" style="display:none"
