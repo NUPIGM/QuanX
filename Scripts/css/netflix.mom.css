@@ -1,13 +1,15 @@
 .ads_w{
-    display: none !important
+    display: none !important;
 }
 .module-blocklist{
-    display:none !important
+    display:none !important;
 }
 #note{
-    display:none !important
+    display:none !important;
 }
 #recommend-list{
-    display:none !important
+    display:none !important;
 }
-
+#homepage{
+    background: blue;
+}
