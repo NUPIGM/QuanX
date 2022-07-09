@@ -7,9 +7,6 @@
 #note{
     display:none !important;
 }
-#recommend-list{
+.recommend-list{
     display:none !important;
-}
-#homepage{
-    background: blue;
 }
