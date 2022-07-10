@@ -1,1 +1,1 @@
-document.querySelector('.ec-ad').remove();
+document.querySelector('.ec-ad').hidden = 'true';
