@@ -1,1 +1,0 @@
-document.querySelector('.ec-ad').hidden = 'true';
