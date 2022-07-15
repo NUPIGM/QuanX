@@ -8,3 +8,6 @@ div.module-adslist.ads_w {
 div.player_pause{
     display: none !important;
 }
+div.player-rm{
+    display:none !important;
+}
