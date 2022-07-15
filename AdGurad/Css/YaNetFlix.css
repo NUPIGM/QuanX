@@ -1,0 +1,10 @@
+div.module-blocklist.module-player-list {
+    display: none !important;
+}
+
+div.module-adslist.ads_w {
+    display: none !important;
+}
+div.player_pause{
+    display: none !important;
+}

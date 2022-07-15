@@ -1,0 +1,3 @@
+#拦截
+HOST-SUFFIX, 51.la, REJECT
+HOST-SUFFIX, xmmnsl.com, REJECT
