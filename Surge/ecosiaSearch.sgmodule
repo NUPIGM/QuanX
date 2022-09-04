@@ -3,38 +3,38 @@
 #!desc=Safari全能搜索(需要把Safari的搜索引擎设置为：ecosia)，搜索示例:bd google，bd+搜索词可切换百度
 #!system=ios
 #https://www.ecosia.org/search?q=
-#^https?:\/\/(www\.)?ecosia\.org\/search\?q=... ([^&]+).*
+#^https?:\/\/(www\.)?ecosia\.org\/search\?q=...\+([^&]+).*
 
 [URL Rewrite]
 
 # gg(Google)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=gg ([^&]+).* https://www.google.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=gg\+([^&]+).* https://www.google.com/search?q=$2 302
 
 # gm (Google图片)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=gm ([^&]+).* https://www.google.com/search?&tbm=isch&q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=gm\+([^&]+).* https://www.google.com/search?&tbm=isch&q=$2 302
 
 # tf (Google 搜索 TestFlight)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tf ([^&]+).* https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tf\+([^&]+).* https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
 
 # bi (必应)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=bi ([^&]+).* https://cn.bing.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=bi\+([^&]+).* https://cn.bing.com/search?q=$2 302
 
 # ddg (DuckDuckGo)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=ddg ([^&]+).* https://duckduckgo.com/?ia=about&q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=ddg\+([^&]+).* https://duckduckgo.com/?ia=about&q=$2 302
 
 # bd(baidu)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=bd ([^&]+).* https://m.baidu.com/s?word=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=bd\+([^&]+).* https://m.baidu.com/s?word=$2 302
 
 # == 网盘
 
 # gd(Google Drive)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=gd ([^&]+).* https://www.google.com/search?q=%22Google+Drive%22+$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=gd\+([^&]+).* https://www.google.com/search?q=%22Google+Drive%22+$2 302
 
 # tgd(t.me/gdurl 搜索Google Drive)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tgd ([^&]+).* https://t.me/s/gdurl?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tgd\+([^&]+).* https://t.me/s/gdurl?q=$2 302
 
 # zgd(zhao.pp.ua搜索Google Drive)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=zgd ([^&]+).* https://zhao.pp.ua/?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=zgd\+([^&]+).* https://zhao.pp.ua/?q=$2 302
 
 # == 苹果商店切换
 #源链接爬虫于>>https://www.liangjianghu.com/searchads-appstore-switch
@@ -57,95 +57,95 @@
 
 # 社区
 # db(豆瓣)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=db ([^&]+).* https://m.douban.com/search/?query=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=db\+([^&]+).* https://m.douban.com/search/?query=$2 302
 
 # zh(知乎)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=zh ([^&]+).* https://www.zhihu.com/search?type=content&q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=zh\+([^&]+).* https://www.zhihu.com/search?type=content&q=$2 302
 
 # wb(微博)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=wb ([^&]+).* https://m.weibo.cn/search?containerid=100103type%3D1%26q%3D$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=wb\+([^&]+).* https://m.weibo.cn/search?containerid=100103type%3D1%26q%3D$2 302
 
 # wx(微信)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=wx ([^&]+).* https://weixin.sogou.com/weixinwap?query=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=wx\+([^&]+).* https://weixin.sogou.com/weixinwap?query=$2 302
 
 # rd(Reddit)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=rd ([^&]+).* https://www.reddit.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=rd\+([^&]+).* https://www.reddit.com/search?q=$2 302
 
 # tw(Twitter)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tw ([^&]+).* https://twitter.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tw\+([^&]+).* https://twitter.com/search?q=$2 302
 
 # ssp(少数派)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=ssp ([^&]+).* https://sspai.com/search/post/$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=ssp\+([^&]+).* https://sspai.com/search/post/$2 302
 
 # tt(头条)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tt ([^&]+).* https://so.toutiao.com/search?keyword=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tt\+([^&]+).* https://so.toutiao.com/search?keyword=$2 302
 
 # up xxx (Unsplash)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=up ([^&]+).* https://unsplash.com/s/photos/$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=up\+([^&]+).* https://unsplash.com/s/photos/$2 302
 
 # csdn(CSDN)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=csdn ([^&]+).* https://so.csdn.net/so/search/s.do?q=$2&t=&u= 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=csdn\+([^&]+).* https://so.csdn.net/so/search/s.do?q=$2&t=&u= 302
 
 # gh (GitHub)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=gh ([^&]+).* https://github.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=gh\+([^&]+).* https://github.com/search?q=$2 302
 
 # tm (油猴搜索)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tm ([^&]+).* https://greasyfork.org/zh-CN/scripts?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tm\+([^&]+).* https://greasyfork.org/zh-CN/scripts?q=$2 302
 
 # mg (Magi)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=mg ([^&]+).* https://magi.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=mg\+([^&]+).* https://magi.com/search?q=$2 302
 
 
 #wk (Wikipedia中文)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=wk ([^&]+).* https://zh.wikipedia.org/wiki/$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=wk\+([^&]+).* https://zh.wikipedia.org/wiki/$2 302
 
 #wiki (Wikipedia)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=wiki ([^&]+).* https://wikipedia.org/wiki/$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=wiki\+([^&]+).* https://wikipedia.org/wiki/$2 302
 
 #sof (Stack Overflow)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=sof ([^&]+).* https://stackoverflow.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=sof\+([^&]+).* https://stackoverflow.com/search?q=$2 302
 
 # yd  (有道词典)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=yd ([^&]+).* https://dict.youdao.com/search?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=yd\+([^&]+).* https://dict.youdao.com/search?q=$2 302
 
 # trc  (Google 译至中)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=trc ([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=trc\+([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
 
 # tre  (Google 译至英)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tre ([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tre\+([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
 
 # trj  (Google 译至日)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=trj ([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=trj\+([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$2 302
 
 
 # == 购物
 # zdm(什么值得买)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=zdm ([^&]+).* https://search.m.smzdm.com/?v=b&s=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=zdm\+([^&]+).* https://search.m.smzdm.com/?v=b&s=$2 302
 
 # amz(亚马逊)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=amz ([^&]+).* https://www.amazon.cn/gp/aw/s/?k=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=amz\+([^&]+).* https://www.amazon.cn/gp/aw/s/?k=$2 302
 
 # jd(京东)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=jd ([^&]+).* https://so.m.jd.com/ware/search.action?keyword=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=jd\+([^&]+).* https://so.m.jd.com/ware/search.action?keyword=$2 302
 
 # tb(淘宝)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tb ([^&]+).* https://s.m.taobao.com/h5?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tb\+([^&]+).* https://s.m.taobao.com/h5?q=$2 302
 
 # tm(天猫)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=tm ([^&]+).* https://s.m.tmall.com/m/search.htm?q=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=tm\+([^&]+).* https://s.m.tmall.com/m/search.htm?q=$2 302
 
 # == 视频资源
 # ac(Acfun)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=ac ([^&]+).* https://www.acfun.cn/search?keyword==$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=ac\+([^&]+).* https://www.acfun.cn/search?keyword==$2 302
 
 # bli(哔哩哔哩)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=bli ([^&]+).* https://m.bilibili.com/search?keyword=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=bli\+([^&]+).* https://m.bilibili.com/search?keyword=$2 302
 
 # ytb(YouTube)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=ytb ([^&]+).* https://www.youtube.com/results?search_query=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=ytb\+([^&]+).* https://www.youtube.com/results?search_query=$2 302
 
 # ph(PornHub)
-^https?:\/\/(www\.)?ecosia\.org\/search\?q=ph ([^&]+).* https://cn.pornhub.com/video/search?search=$2 302
+^https?:\/\/(www\.)?ecosia\.org\/search\?q=ph\+([^&]+).* https://cn.pornhub.com/video/search?search=$2 302
 
 # ====
 
