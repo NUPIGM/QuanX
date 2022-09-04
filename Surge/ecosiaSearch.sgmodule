@@ -1,72 +1,166 @@
-https://www.ecosia.org/search?q=google&tts=st_asaf_iphone
 
 #!name=聚合搜索
-#!desc=Safari全能搜索百度版(需要把Safari的搜索引擎设置为：百度)，搜索示例:gg 充电宝,已适配chrome，bd+词可切换百度
+#!desc=Safari全能搜索(需要把Safari的搜索引擎设置为：ecosia)，搜索示例:bd 充电宝，bd+搜索词可切换百度
 #!system=ios
+#https://www.ecosia.org/search?q=
+#^https:\/\/www\.ecosia\.org\/search\?q=
 
 [URL Rewrite]
 
-#wk (Wikipedia中文) k\+([^&]+) https://zh.wikipedia.org/wiki/$2 302
+# 阻止google.com 跳转到google.com.hk
+^https?:\/\/(www\.)?g\.cn https://www.google.com 302
+^https?:\/\/(www\.)?google\.cn https://www.google.com 302
 
-#wiki (Wikipedia)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=wiki\+([^&]+) https://wikipedia.org/wiki/$2 302
-
-#sof (Stack Overflow)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=sof\+([^&]+) https://stackoverflow.com/search?q=$2 302
-
-# yd  (有道词典)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=yd\+([^&]+) https://dict.youdao.com/search?q=$2 302
-
-# trc  (Google 译至中)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=trc\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
-
-# tre  (Google 译至英)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=tre\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
-
-# trj  (Google 译至日)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=trj\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$2 302
-
-# gm (Google图片)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=gm\+([^&]+) https://www.google.com/search?&tbm=isch&q=$2 302
-
-# gh (GitHub)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=gh\+([^&]+) https://github.com/search?q=$2 302
-
-# tf (Google 搜索 TestFlight)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=tf(\+|%20)([^&]+) https://www.google.com/search?as_q=$3&as_sitesearch=testflight.apple.com 302
-
-# wb (微博)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=wb\+([^&]+) https://s.weibo.com/weibo/$2 302
-
-# wx (微信)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=wx\+([^&]+) https://weixin.sogou.com/weixinwap?query=$2 3
-
-# jd (京东)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=jd\+([^&]+) https://so.m.jd.com/ware/search.action?keyword=$2 302
-
-# tb (淘宝)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=tb\+([^&]+) https://s.m.taobao.com/h5?q=$2 302
-
-# tm (天猫)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=tm\+([^&]+) https://s.m.tmall.com/m/search.htm?q=$2 302
-
-# ytb (YouTube
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=ytb\+([^&]+) https://www.youtube.com/results?search_query=$2 302
-
-# ph (PornHub)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=ph\+([^&]+) https://cn.pornhub.com/video/search?search=$2 302
-
-# bi (必应)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=bi\+([^&]+) https://cn.bing.com/search?q=$2 302
-
-# ddg (DuckDuckGo)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=ddg\+([^&]+) https://duckduckgo.com/?ia=about&q=$2 302
+# 无指令(谷歌)
+^https:\/\/www\.ecosia\.org\/search\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 # gg(Google)
-^https:\/\/m\.baidu\.com/s\?from=(.+)&word=gg\+([^&]+) https://www.google.com/search?q=$2 302
+^https:\/\/www\.ecosia\.org\/search\?q=gg\+([^&]+) https://www.google.com/search?q=$1 302
 
-# Chrome  bd(baidu)
-^https:\/\/www\.google\.com\/search\?q=bd\+([^&]+) https://m.baidu.com/s?word=$1 302
+# gm (Google图片)
+^https:\/\/www\.ecosia\.org\/search\?q=gm\+([^&]+) https://www.google.com/search?&tbm=isch&q=$1 302
+
+# bi (必应)
+^https:\/\/www\.ecosia\.org\/search\?q=bi\+([^&]+) https://cn.bing.com/search?q=$1 302
+
+# ddg (DuckDuckGo)
+^https:\/\/www\.ecosia\.org\/search\?q=ddg\+([^&]+) https://duckduckgo.com/?ia=about&q=$1 302
+
+# bd(baidu)
+^https:\/\/www\.ecosia\.org\/search\?q=bd\+([^&]+) https://m.baidu.com/s?word=$1 302
+
+# == 网盘
+
+# gd(Google Drive)
+^https:\/\/www\.ecosia\.org\/search\?q=gd\+([^&]+).+ url 302 https://www.google.com/search?q=%22Google+Drive%22+$1
+
+# tgd(t.me/gdurl 搜索Google Drive)
+^https:\/\/www\.ecosia\.org\/search\?q=tgd\+([^&]+).+ url 302 https://t.me/s/gdurl?q=$1
+
+# zgd(zhao.pp.ua搜索Google Drive)
+^https:\/\/www\.ecosia\.org\/search\?q=zgd(\+|%20)([^&]+).+ url 302 https://zhao.pp.ua/?q=$2
+
+# == 苹果商店切换
+#源链接爬虫于>>https://www.liangjianghu.com/searchads-appstore-switch
+#Created by ddgksf2013，使用方法：输入区号，搜索即可
+# cn  (切换至中国区)
+^https:\/\/www\.ecosia\.org\/search\?q=cn&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143465&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=cn&urlDesc=
+# hk  (切换至香港区)
+^https:\/\/www\.ecosia\.org\/search\?q=hk&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143463&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=hk&urlDesc=
+# tw  (切换至台湾区)
+^https:\/\/www\.ecosia\.org\/search\?q=tw&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143470&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=tw&urlDesc=
+# us  (切换至美国区)
+^https:\/\/www\.ecosia\.org\/search\?q=us&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143441&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=us&urlDesc=
+# jp  (切换至日本区)
+^https:\/\/www\.ecosia\.org\/search\?q=jp&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143462&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=jp&urlDesc=
+# kr  (切换至韩国区)
+^https:\/\/www\.ecosia\.org\/search\?q=kr&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143466&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=kr&urlDesc=
+# tr  (切换至土耳其区)
+^https:\/\/www\.ecosia\.org\/search\?q=tr&.+ url 302 https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143480&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=tr&urlDesc=
+
+
+# 社区
+# db(豆瓣)
+^https:\/\/www\.ecosia\.org\/search\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+
+# zh(知乎)
+^https:\/\/www\.ecosia\.org\/search\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+
+# wb(微博)
+^https:\/\/www\.ecosia\.org\/search\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+
+# wx(微信)
+^https:\/\/www\.ecosia\.org\/search\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+
+# rd(Reddit)
+^https:\/\/www\.ecosia\.org\/search\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
+
+# tw(Twitter)
+^https:\/\/www\.ecosia\.org\/search\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+
+# ssp(少数派)
+^https:\/\/www\.ecosia\.org\/search\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+# tt(头条)
+^https:\/\/www\.ecosia\.org\/search\?q=tt\+([^&]+).+ https://so.toutiao.com/search?keyword=$1 302
+
+# up xxx (Unsplash)
+^https:\/\/www\.ecosia\.org\/search\?q=up\+([^&]+).+ https://unsplash.com/s/photos/$1 302
+
+# csdn(CSDN)
+^https:\/\/www\.ecosia\.org\/search\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+
+# gh (GitHub)
+^https:\/\/www\.ecosia\.org\/search\?q=gh\+([^&]+) https://github.com/search?q=$1 302
+
+# tf (Google 搜索 TestFlight)
+^https:\/\/www\.ecosia\.org\/search\?q=tf\+([^&]+) https://www.google.com/search?as_q=$1&as_sitesearch=testflight.apple.com 302
+
+# wb (微博)
+^https:\/\/www\.ecosia\.org\/search\?q=wb\+([^&]+) https://s.weibo.com/weibo/$1 302
+
+# wx (微信)
+^https:\/\/www\.ecosia\.org\/search\?q=wx\+([^&]+) https://weixin.sogou.com/weixinwap?query=$1 302
+
+# yh (油猴搜索)
+^https:\/\/www\.ecosia\.org\/search\?q=yh\+([^&]+).+ https://greasyfork.org/zh-CN/scripts?q=$1 302
+
+# mg (Magi)
+^https:\/\/www\.ecosia\.org\/search\?q=mg\+([^&]+).+ https://magi.com/search?q=$1 302
+
+
+#wk (Wikipedia中文)
+^https:\/\/www\.ecosia\.org\/search\?q=wk\+([^&]+) https://zh.wikipedia.org/wiki/$1 302
+
+#wiki (Wikipedia)
+^https:\/\/www\.ecosia\.org\/search\?q=wiki\+([^&]+) https://wikipedia.org/wiki/$1 302
+
+#sof (Stack Overflow)
+^https:\/\/www\.ecosia\.org\/search\?q=sof\+([^&]+) https://stackoverflow.com/search?q=$1 302
+
+# yd  (有道词典)
+^https:\/\/www\.ecosia\.org\/search\?q=yd\+([^&]+) https://dict.youdao.com/search?q=$1 302
+
+# trc  (Google 译至中)
+^https:\/\/www\.ecosia\.org\/search\?q=trc\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+
+# tre  (Google 译至英)
+^https:\/\/www\.ecosia\.org\/search\?q=tre\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+
+# trj  (Google 译至日)
+^https:\/\/www\.ecosia\.org\/search\?q=trj\+([^&]+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+
+
+# == 购物
+# zdm(什么值得买)
+^https:\/\/www\.ecosia\.org\/search\?q=zdm\+([^&]+).+ url 302 https://search.m.smzdm.com/?v=b&s=$1
+
+# amz(亚马逊)
+^https:\/\/www\.ecosia\.org\/search\?q=amz\+([^&]+).+ url 302 https://www.amazon.cn/gp/aw/s/?k=$1
+
+# jd(京东)
+^https:\/\/www\.ecosia\.org\/search\?q=jd\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
+
+# tb(淘宝)
+^https:\/\/www\.ecosia\.org\/search\?q=tb\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
+
+# tm(天猫)
+^https:\/\/www\.ecosia\.org\/search\?q=tm\+([^&]+).+ url 302 https://s.m.tmall.com/m/search.htm?q=$1
+
+# > 视频资源
+# ac(Acfun)
+^https:\/\/www\.ecosia\.org\/search\?q=ac\+([^&]+).+ url 302 https://www.acfun.cn/search?keyword==$1
+
+# bli(哔哩哔哩)
+^https:\/\/www\.ecosia\.org\/search\?q=bli\+([^&]+).+ url 302 https://m.bilibili.com/search?keyword=$1
+
+# ytb(YouTube)
+^https:\/\/www\.ecosia\.org\/search\?q=ytb\+([^&]+).+ url 302 https://www.youtube.com/results?search_query=$1
+
+# ph(PornHub)
+^https:\/\/www\.ecosia\.org\/search\?q=ph\+([^&]+).+ url 302 https://cn.pornhub.com/video/search?search=$1
+
+
 
 [MITM]
-hostname = %APPEND% www.ecosia.org,www.google.com
+hostname = %APPEND% www.ecosia.org, www.google.com
