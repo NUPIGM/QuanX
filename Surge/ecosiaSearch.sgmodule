@@ -7,13 +7,6 @@
 
 [URL Rewrite]
 
-# 阻止google.com 跳转到google.com.hk
-^https?:\/\/(www\.)?g\.cn https://www.google.com 302
-^https?:\/\/(www\.)?google\.cn https://www.google.com 302
-
-# 无指令(谷歌)
-^https:\/\/www\.ecosia\.org\/search\?q=([^&]+) https://www.google.com/search?q=$1 302
-
 # gg(Google)
 ^https:\/\/www\.ecosia\.org\/search\?q=gg\+([^&]+) https://www.google.com/search?q=$1 302
 
@@ -154,7 +147,14 @@
 # ph(PornHub)
 ^https:\/\/www\.ecosia\.org\/search\?q=ph\+([^&]+) https://cn.pornhub.com/video/search?search=$1 302
 
+# ====
 
+# 无指令(谷歌)
+^https:\/\/www\.ecosia\.org\/search\?q=([^&]+) https://www.google.com/search?q=$1 302
+
+# 阻止google.com 跳转到google.com.hk
+^https?:\/\/(www\.)?g\.cn https://www.google.com 302
+^https?:\/\/(www\.)?google\.cn https://www.google.com 302
 
 [MITM]
 hostname = %APPEND% www.ecosia.org, www.google.com
