@@ -1,0 +1,64 @@
+
+// 由本群key修改提供。
+const REQUEST_HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
+  'Accept-Language': 'en',
+}
+
+const baidu={
+    name:"baidu",
+    url:"https://www.baidu.com"
+}
+const google={
+    name:"google",
+    url:"https://www.google.com/generate_204"
+}
+
+
+;(async () => {
+  let panel_result = {
+    title: 'Network Connectivity Test',
+    content: '',
+    icon: 'wifi.circle',
+    'icon-color': '#FF5A9AF9',
+  }
+
+  await Promise.all([test_web(baidu), test_web(google)])
+    .then((result) => {
+      let content = result.join('|')
+      panel_result['content'] = content
+    })
+    .finally(() => {
+      $done(panel_result)
+    })
+})()
+
+
+/////baidu
+async function test_web(web) {
+  let inner_check = () => {
+    return new Promise((resolve) => {
+      let option = {
+        url: web.url,
+        headers: REQUEST_HEADERS,
+      }
+      startTime = Date.now()
+      $httpClient.post(option, function (error, response, data) {
+        endTime = Date.now()
+        resolve('1')
+      })
+    })
+  }
+
+  test_result = web.name + ':'
+  await inner_check()
+    .then((code) => {
+      Delay = endTime - startTime
+      if (code === '1') {
+        test_result += Delay + 'ms'
+      }
+    })
+  
+  return test_result
+}
