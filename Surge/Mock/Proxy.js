@@ -3,7 +3,7 @@ function queryURLParams() {
       let url = window.location.search;
       const urlSearchParams = new URLSearchParams(url);
       const params = Object.fromEntries(urlSearchParams.entries());
-      return params;
+      return params.sub;
     }
 //提取订阅的网址
 let sub = queryURLParams();
