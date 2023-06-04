@@ -17,16 +17,20 @@ fetch(sub)
   .catch(error => {
     console.error(error);
   });
-//将数据进行base64解析
+  
+//处理数据
 function processData(data) {
-  const base64Config = data.split('vmess://');
-  for(let config in base64Config){
+  //拆分多个链接
+  let base64Config = data.split("\n");
+  //解码base64
+  let decodedConfig = base64Config.map(base64Config =>{
+    let config = base64Config.replace("vmess://","");
     const decodedConfig = atob(config);
   const jsonConfig = JSON.parse(decodedConfig);
-    }
+  let strConfig = JSON.stringify(jsonConfig).replace(/[{}"]/g, "").replace(/:/g,"=")
+  })
+  return strConfig;
 }
-
-
-    // 将脚本放在末尾，确保DOM已加载
+    //将脚本放在末尾，确保DOM已加载
     document.getElementById('output').innerHTML = a;
 
