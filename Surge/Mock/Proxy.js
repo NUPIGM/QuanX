@@ -12,7 +12,7 @@ fetch(sub)
   .then(response => response.json())
   .then(data => {
     // 在这里对数据进行处理或传递到其他函数
-    processData(data);
+    let result = processData(data).join("\n");
   })
   .catch(error => {
     console.error(error);
@@ -32,5 +32,5 @@ function processData(data) {
   return strConfig;
 }
     //将脚本放在末尾，确保DOM已加载
-    document.getElementById('output').innerHTML = a;
+    document.getElementById('output').innerHTML = "我是一个粉刷匠";
 
