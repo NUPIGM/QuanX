@@ -1,3 +1,13 @@
+/**
+进行base64解析
+单独把节点类型分开
+每个进行url解析，字符串格式
+vmess格式不同，base64解析后为json格式
+最后合成surge标准格式
+*
+**/
+
+
 //解析URL属性值：?sub=<url>
 function queryURLParams() {
       let url = window.location.search;
