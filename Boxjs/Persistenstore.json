@@ -2,29 +2,29 @@
   "id": "diisbsid",
   "name": " 应用订阅",
   "author": "@作者",
-  "icon": "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/13th.png",
-  "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master",
+  "icon": "",
+  "repo": "",
   "apps": [
     {
-      "id": "appid_32992",
-      "name": "显示名称",
+      "id": "",
+      "name": "",
       "descs_html": [
-        "点此直达【<a href=\"https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js\">脚本地址</a>】",
-        "首先前往<a href=\"https://api.nasa.gov\">NASA</a>申请一个API，申请流程非常简单，把得到的API填入脚本即可"
+        "<a href=""></a>"
+        
       ],
       "keys": [
-        "@NASA.nasaapi"
+        ""
       ],
       "settings": [
         {
-          "id": "@NASA.translate",
+          "id": "@",
           "name": "翻译",
           "val": false,
           "type": "boolean",
           "desc": "是否进行翻译"
         },
         {
-          "id": "@abcd",
+          "id": "@",
           "name": "API",
           "val": "",
           "placeholder": "686BJ2YbpY****************Op8gaVTeVs0t",
@@ -35,12 +35,12 @@
         }
       ],
       "author": "@作者",
-      "repo": "https://github.com/evilbutcher/Quantumult_X/tree/master/check_in/nasa",
+      "repo": "",
       "icons": [
-        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/nasa_tran.png",
-        "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/nasa.png"
+        "",
+        ""
       ],
-      "script": "https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js"
+      "script": ""
     }
   ]
 }
