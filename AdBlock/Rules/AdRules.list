@@ -7,6 +7,4 @@ DOMAIN-SUFFIX,zgkvfu.buzz,REJECT
 DOMAIN,aod.cos.tx.xmcdn.com,REJECT
 DOMAIN,rzasy.ydgh0zc.com,REJECT
 DOMAIN,cdn.image-huankouxyz.com,REJECT
-DOMAIN,ocsp.digicert.com,REJECT
 DOMAIN,h5.izuiyou.com,REJECT
-DOMAIN,ocsp.apple.com,REJECT
