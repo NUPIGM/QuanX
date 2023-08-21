@@ -1,3 +1,12 @@
 #拦截
-HOST-SUFFIX, 51.la, REJECT
-HOST-SUFFIX, xmmnsl.com, REJECT
+DOMAIN,b17df.txibpfyj.com,REJECT
+DOMAIN-SUFFIX,zguqxf.buzz,REJECT
+DOMAIN-SUFFIX,zgfpro.buzz,REJECT
+DOMAIN,kip.g62gb.com,REJECT
+DOMAIN-SUFFIX,zgkvfu.buzz,REJECT
+DOMAIN,aod.cos.tx.xmcdn.com,REJECT
+DOMAIN,rzasy.ydgh0zc.com,REJECT
+DOMAIN,cdn.image-huankouxyz.com,REJECT
+DOMAIN,ocsp.digicert.com,REJECT
+DOMAIN,h5.izuiyou.com,REJECT
+DOMAIN,ocsp.apple.com,REJECT
