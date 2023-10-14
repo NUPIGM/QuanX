@@ -10,5 +10,9 @@ DOMAIN,cdn.image-huankouxyz.com,REJECT
 DOMAIN,h5.izuiyou.com,REJECT
 DOMAIN,wv.inner-active.mobi,REJECT
 DOMAIN,graph.facebook.com,REJECT
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+
+
 
 
