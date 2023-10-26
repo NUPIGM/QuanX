@@ -12,7 +12,7 @@ DOMAIN,wv.inner-active.mobi,REJECT
 DOMAIN,graph.facebook.com,REJECT
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
-
+DOMAIN,upos-sz-staticcos.bilivideo.com,REJECT
 
 
 
