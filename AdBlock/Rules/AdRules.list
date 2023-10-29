@@ -13,6 +13,13 @@ DOMAIN,graph.facebook.com,REJECT
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
 DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
 DOMAIN,upos-sz-staticcos.bilivideo.com,REJECT
+# 微信小程序去广告通用规则
+DOMAIN, wxsnsdy.wxs.qq.com, REJECT
+DOMAIN, wxsmsdy.video.qq.com, REJECT
+DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
+# 收钱吧 - 买单小程序去广告
+DOMAIN, ads-shopping.shouqianba.com, REJECT
+
 
 
 
