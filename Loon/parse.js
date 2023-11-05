@@ -1,1 +1,3 @@
-$done(123)
+
+console.log(1)
+$done(2)
