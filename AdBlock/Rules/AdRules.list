@@ -18,5 +18,6 @@ DOMAIN, wxsmsdy.video.qq.com, REJECT
 DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 DOMAIN,waapdg.jd.com,REJECT
+DOMAIN,p1-lm.adukwai.com,REJECT
 
 
