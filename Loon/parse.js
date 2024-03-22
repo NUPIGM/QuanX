@@ -1,3 +1,3 @@
 
-console.log(1)
-$done(2)
+console.log($)
+$done("123")
