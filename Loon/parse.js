@@ -1,3 +1,3 @@
 
-console.log($)
-$done("123")
+a=$resource
+$done(a)
