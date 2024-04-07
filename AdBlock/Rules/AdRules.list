@@ -19,5 +19,13 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 DOMAIN,waapdg.jd.com,REJECT
 DOMAIN,p1-lm.adukwai.com,REJECT
-
+DOMAIN,s3plus.meituan.net,REJECT-DROP
+DOMAIN,route-stats.dreport.meituan.net,REJECT-DROP
+DOMAIN,data-sdk-uuid-report.dreport.meituan.net,REJECT-DROP
+URL-REGEX,beauty-.*-flv.meituan.net,REJECT-DROP
+DOMAIN,mlvbdc.live.qcloud.com,REJECT-DROP
+DOMAIN,portal-portm.meituan.com,REJECT-DROP
+DOMAIN,metrics-picture.dreport.meituan.net,REJECT-DROP
+DOMAIN,vcards.metowolf.com,REJECT-DROP
+DOMAIN,catfront.dianping.com,REJECT-DROP
 
