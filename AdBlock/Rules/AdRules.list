@@ -19,7 +19,7 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 DOMAIN,waapdg.jd.com,REJECT
 DOMAIN,p1-lm.adukwai.com,REJECT
-
+DOMAIN,cubichost.net
 DOMAIN,route-stats.dreport.meituan.net,REJECT-DROP
 DOMAIN,data-sdk-uuid-report.dreport.meituan.net,REJECT-DROP
 URL-REGEX,beauty-.*-flv.meituan.net,REJECT-DROP
