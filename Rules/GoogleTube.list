@@ -1,4 +1,6 @@
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,googleapis.com
+.google.com
+.youtube.com
+.googleusercontent.com
+.googleapis.com
+.google.com.hk
+.google.cn
