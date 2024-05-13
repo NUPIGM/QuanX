@@ -11,4 +11,4 @@
 # ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
-hostname = %APPEND% www.google.cn
+hostname = %APPEND% *.google.cn *.google.com.hk
