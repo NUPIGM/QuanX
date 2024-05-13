@@ -6,9 +6,9 @@
 #!date=2024-05-12
 
 [URL Rewrite]
-# ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) https://www.google.com 302
+# ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+# ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
 hostname = %APPEND% www.google.cn
