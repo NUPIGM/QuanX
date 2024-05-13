@@ -1,5 +1,8 @@
 #!name=Google搜索重定向
 #!desc=将Google搜索重定向至.com域名
+#!category=功能扩展
+#!arguments=数据表
+#!arguments-desc=数据表概况
 #!date=2024-05-12
 
 [URL Rewrite]
