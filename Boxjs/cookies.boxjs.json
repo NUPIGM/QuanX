@@ -36,7 +36,7 @@
       "author": "@",
       "repo": "https://github.com/",
       "scripts": []
-    }，
+    },
     {
       "id": "MMBUY_Cookie",
       "name": "慢慢买Cookie",
@@ -57,7 +57,7 @@
       "author": "",
       "repo": "",
       "scripts": []
-    }，
+    },
     {
       "id": "GD_Cookie",
       "name": "高德地图Cookie",
@@ -78,7 +78,7 @@
       "author": "",
       "repo": "",
       "scripts": []
-    }，
+    },
     {
       "id": "ddgyToken_Cookie",
       "name": "滴滴出行Cookie",
