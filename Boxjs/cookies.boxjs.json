@@ -4,18 +4,29 @@
   "author": "@mine",
   "icon": "",
   "repo": "https://github.com/",
+   "onInstall": {
+    "title": "安装确认",
+    "message": "本订阅包含重写资源, 是否需要自动安装?",
+    "install": {
+      "Surge": "surge:///install-module?url=https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/get_jd_cookies.sgmodule",
+      "QuanX": "quantumult-x:///add-resource?remote-resource=",
+      "Loon": "loon://import?plugin=",
+      "Shadowrocket": "",
+      "Stash": ""
+    }
+  },
   "apps": [
     {
-      "id": "meituan_Cookies",
-      "name": "美团账号",
+      "id": "meituan_Cookie",
+      "name": "美团Cookie",
       "keys": ["meituanCookie"],
       "descs_html": [
-        "<a href='https://raw.githubusercontent.com' target='_blank'>按装获取cookie脚本</>"
+        "<a href='https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/get_jd_cookies.sgmodule' target='_blank'>安装cookie模块</>"
       ],
       "settings": [
         {
           "id": "meituanCookie",
-          "name": "CK 列表",
+          "name": "CooKie",
           "val": "",
           "type": "text",
           "desc": "CK"
@@ -24,6 +35,69 @@
       "icons": [""],
       "author": "@",
       "repo": "https://github.com/",
+      "scripts": []
+    }，
+    {
+      "id": "MMBUY_Cookie",
+      "name": "慢慢买Cookie",
+      "keys": ["MMBUY"],
+      "descs_html": [
+        ""
+      ],
+      "settings": [
+        {
+          "id": "MMBUY",
+          "name": "慢慢买Cookie",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "",
+      "repo": "",
+      "scripts": []
+    }，
+    {
+      "id": "GD_Cookie",
+      "name": "高德地图Cookie",
+      "keys": ["GD_Val"],
+      "descs_html": [
+        ""
+      ],
+      "settings": [
+        {
+          "id": "GD_Val",
+          "name": "高德地图Cookie",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "",
+      "repo": "",
+      "scripts": []
+    }，
+    {
+      "id": "ddgyToken_Cookie",
+      "name": "滴滴出行Cookie",
+      "keys": ["ddgyToken"],
+      "descs_html": [
+        ""
+      ],
+      "settings": [
+        {
+          "id": "ddgyToken",
+          "name": "滴滴出行Cookie",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "",
+      "repo": "",
       "scripts": []
     }
   ]
