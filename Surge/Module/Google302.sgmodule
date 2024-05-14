@@ -1,7 +1,7 @@
 #!name=Google搜索重定向
 #!desc=将Google搜索重定向至.com域名
 #!category=功能扩展
-#!arguments=数据表
+#!arguments=数据表:1
 #!arguments-desc=数据表概况
 #!date=2024-05-12
 
@@ -11,4 +11,4 @@
 # ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 [MITM]
-hostname = %APPEND% www.google.cn www.google.com.hk
+hostname = %APPEND% www.google.cn google.cn www.google.com.hk google.com.hk
