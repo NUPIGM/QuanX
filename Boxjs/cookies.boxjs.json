@@ -1,0 +1,30 @@
+{
+  "id": "mine.cookies",
+  "name": "我的签到cookie保存",
+  "author": "@mine",
+  "icon": "",
+  "repo": "https://github.com/",
+  "apps": [
+    {
+      "id": "meituan_Cookies",
+      "name": "美团账号",
+      "keys": ["meituanCookie"],
+      "descs_html": [
+        "<a href='https://raw.githubusercontent.com' target='_blank'>按装获取cookie脚本</>"
+      ],
+      "settings": [
+        {
+          "id": "meituanCookie",
+          "name": "CK 列表",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "@",
+      "repo": "https://github.com/",
+      "scripts": []
+    }
+  ]
+}
