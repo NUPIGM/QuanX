@@ -1,27 +1,27 @@
 # DOMAIN
-.zguqxf.buzz,REJECT-DROP
-.zgfpro.buzz,REJECT-DROP
-.zgkvfu.buzz,REJECT-DROP
+.zguqxf.buzz
+.zgfpro.buzz
+.zgkvfu.buzz
 
 # DOMAIN-SUFFIX
-b17df.txibpfyj.com,REJECT-DROP
-kip.g62gb.com,REJECT-DROP
-aod.cos.tx.xmcdn.com,REJECT-DROP
-rzasy.ydgh0zc.com,REJECT-DROP
-cdn.image-huankouxyz.com,REJECT-DROP
-adapi.izuiyou.com,REJECT-DROP
-wv.inner-active.mobi,REJECT-DROP
-graph.facebook.com,REJECT-DROP
-sf3-fe-tos.pglstatp-toutiao.com,REJECT-DROP
-api-access.pangolin-sdk-toutiao.com,REJECT-DROP
-upos-sz-staticcos.bilivideo.com,REJECT-DROP
+b17df.txibpfyj.com
+kip.g62gb.com
+aod.cos.tx.xmcdn.com
+rzasy.ydgh0zc.com
+cdn.image-huankouxyz.com
+adapi.izuiyou.com
+wv.inner-active.mobi
+graph.facebook.com
+sf3-fe-tos.pglstatp-toutiao.com
+api-access.pangolin-sdk-toutiao.com
+upos-sz-staticcos.bilivideo.com
 wxsnsdy.wxs.qq.com, REJECT-DROP
 wxsmsdy.video.qq.com, REJECT-DROP
 wxsnsdythumb.wxs.qq.com, REJECT-DROP
 ads-shopping.shouqianba.com, REJECT-DROP
-waapdg.jd.com,REJECT-DROP
-p1-lm.adukwai.com,REJECT-DROP
-cubichost.net,REJECT-DROP
+waapdg.jd.com
+p1-lm.adukwai.com
+cubichost.net
 route-stats.dreport.meituan.net
 data-sdk-uuid-report.dreport.meituan.net
 URL-REGEX,beauty-.*-flv.meituan.net
@@ -32,4 +32,7 @@ beauty-hw-flv.meituan.net
 vcards.metowolf.com
 catfront.dianping.com
 mlvbdc.live.qcloud.com
+loggw.alipay.com.cn
+datagw-edge.alipay.com
+
 
