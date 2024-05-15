@@ -4,7 +4,7 @@
   "author": "@mine",
   "icon": "",
   "repo": "https://github.com/",
-   "onInstall": {
+  "onInstall": {
     "title": "安装确认",
     "message": "本订阅包含重写资源, 是否需要自动安装?",
     "install": {
@@ -41,9 +41,7 @@
       "id": "MMBUY_Cookie",
       "name": "慢慢买Cookie",
       "keys": ["MMBUY"],
-      "descs_html": [
-        ""
-      ],
+      "descs_html": [""],
       "settings": [
         {
           "id": "MMBUY",
@@ -62,9 +60,7 @@
       "id": "GD_Cookie",
       "name": "高德地图Cookie",
       "keys": ["GD_Val"],
-      "descs_html": [
-        ""
-      ],
+      "descs_html": [""],
       "settings": [
         {
           "id": "GD_Val",
@@ -83,9 +79,7 @@
       "id": "ddgyToken_Cookie",
       "name": "滴滴出行Cookie",
       "keys": ["ddgyToken"],
-      "descs_html": [
-        ""
-      ],
+      "descs_html": [""],
       "settings": [
         {
           "id": "ddgyToken",

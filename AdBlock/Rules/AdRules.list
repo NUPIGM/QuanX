@@ -1,31 +1,35 @@
-#拦截
-DOMAIN,b17df.txibpfyj.com,REJECT
-DOMAIN-SUFFIX,zguqxf.buzz,REJECT
-DOMAIN-SUFFIX,zgfpro.buzz,REJECT
-DOMAIN,kip.g62gb.com,REJECT
-DOMAIN-SUFFIX,zgkvfu.buzz,REJECT
-DOMAIN,aod.cos.tx.xmcdn.com,REJECT
-DOMAIN,rzasy.ydgh0zc.com,REJECT
-DOMAIN,cdn.image-huankouxyz.com,REJECT
-DOMAIN,adapi.izuiyou.com,REJECT
-DOMAIN,wv.inner-active.mobi,REJECT
-DOMAIN,graph.facebook.com,REJECT
-DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
-DOMAIN,upos-sz-staticcos.bilivideo.com,REJECT
-DOMAIN, wxsnsdy.wxs.qq.com, REJECT
-DOMAIN, wxsmsdy.video.qq.com, REJECT
-DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
-DOMAIN, ads-shopping.shouqianba.com, REJECT
-DOMAIN,waapdg.jd.com,REJECT
-DOMAIN,p1-lm.adukwai.com,REJECT
-DOMAIN,cubichost.net,REJECT
-DOMAIN,route-stats.dreport.meituan.net,REJECT-DROP
-DOMAIN,data-sdk-uuid-report.dreport.meituan.net,REJECT-DROP
-URL-REGEX,beauty-.*-flv.meituan.net,REJECT-DROP
-DOMAIN,mlvbdc.live.qcloud.com,REJECT-DROP
-DOMAIN,portal-portm.meituan.com,REJECT-DROP
-DOMAIN,metrics-picture.dreport.meituan.net,REJECT-DROP
-DOMAIN,vcards.metowolf.com,REJECT-DROP
-DOMAIN,catfront.dianping.com,REJECT-DROP
+# DOMAIN
+.zguqxf.buzz,REJECT-DROP
+.zgfpro.buzz,REJECT-DROP
+.zgkvfu.buzz,REJECT-DROP
+
+# DOMAIN-SUFFIX
+b17df.txibpfyj.com,REJECT-DROP
+kip.g62gb.com,REJECT-DROP
+aod.cos.tx.xmcdn.com,REJECT-DROP
+rzasy.ydgh0zc.com,REJECT-DROP
+cdn.image-huankouxyz.com,REJECT-DROP
+adapi.izuiyou.com,REJECT-DROP
+wv.inner-active.mobi,REJECT-DROP
+graph.facebook.com,REJECT-DROP
+sf3-fe-tos.pglstatp-toutiao.com,REJECT-DROP
+api-access.pangolin-sdk-toutiao.com,REJECT-DROP
+upos-sz-staticcos.bilivideo.com,REJECT-DROP
+wxsnsdy.wxs.qq.com, REJECT-DROP
+wxsmsdy.video.qq.com, REJECT-DROP
+wxsnsdythumb.wxs.qq.com, REJECT-DROP
+ads-shopping.shouqianba.com, REJECT-DROP
+waapdg.jd.com,REJECT-DROP
+p1-lm.adukwai.com,REJECT-DROP
+cubichost.net,REJECT-DROP
+route-stats.dreport.meituan.net
+data-sdk-uuid-report.dreport.meituan.net
+URL-REGEX,beauty-.*-flv.meituan.net
+portal-portm.meituan.com
+metrics-picture.dreport.meituan.net
+beauty-js-flv.meituan.net
+beauty-hw-flv.meituan.net
+vcards.metowolf.com
+catfront.dianping.com
+mlvbdc.live.qcloud.com
 

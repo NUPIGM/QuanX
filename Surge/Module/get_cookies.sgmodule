@@ -10,7 +10,7 @@
 获取爱奇艺Cookie = type=http-request,requires-body=0,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 获取中国联通Cookie = type=http-request,pattern=^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 获取GLaDOS_Cookie = type=http-request, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
-
+获取蜜雪冰城token = type=http-response, pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = %INSERT% beam.m.jd.com, i.meituan.com, iface?.iqiyi.com, m.client.10010.com, glados.rocks
+hostname = %INSERT% beam.m.jd.com, i.meituan.com, iface?.iqiyi.com, m.client.10010.com, glados.rocks, mxsa.mxbc.net
