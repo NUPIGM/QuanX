@@ -15,10 +15,10 @@ graph.facebook.com
 sf3-fe-tos.pglstatp-toutiao.com
 api-access.pangolin-sdk-toutiao.com
 upos-sz-staticcos.bilivideo.com
-wxsnsdy.wxs.qq.com, REJECT-DROP
-wxsmsdy.video.qq.com, REJECT-DROP
-wxsnsdythumb.wxs.qq.com, REJECT-DROP
-ads-shopping.shouqianba.com, REJECT-DROP
+wxsnsdy.wxs.qq.com
+wxsmsdy.video.qq.com
+wxsnsdythumb.wxs.qq.com
+ads-shopping.shouqianba.com
 waapdg.jd.com
 p1-lm.adukwai.com
 cubichost.net
