@@ -18,10 +18,10 @@
   "apps": [
     {
       "id": "meituan_Cookie",
-      "name": "美团Cookie",
+      "name": "美团",
       "keys": ["meituanCookie"],
       "descs_html": [
-        "<a href='https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/get_jd_cookies.sgmodule' target='_blank'>安装cookie模块</>"
+        "<a href='https://i.meituan.com/mttouch/page/magiccard' target='_blank'>跳转登录</>"
       ],
       "settings": [
         {
@@ -33,13 +33,13 @@
         }
       ],
       "icons": [""],
-      "author": "@",
-      "repo": "https://github.com/",
+      "author": "",
+      "repo": "",
       "scripts": []
     },
     {
       "id": "MMBUY_Cookie",
-      "name": "慢慢买Cookie",
+      "name": "慢慢买",
       "keys": ["MMBUY"],
       "descs_html": [""],
       "settings": [
@@ -58,7 +58,7 @@
     },
     {
       "id": "GD_Cookie",
-      "name": "高德地图Cookie",
+      "name": "高德地图",
       "keys": ["GD_Val"],
       "descs_html": [""],
       "settings": [
@@ -77,13 +77,51 @@
     },
     {
       "id": "ddgyToken_Cookie",
-      "name": "滴滴出行Cookie",
+      "name": "滴滴出行",
       "keys": ["ddgyToken"],
       "descs_html": [""],
       "settings": [
         {
           "id": "ddgyToken",
           "name": "滴滴出行Cookie",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "",
+      "repo": "",
+      "scripts": []
+    },
+    {
+      "id": "mxbc_data_Cookie",
+      "name": "蜜雪冰城",
+      "keys": ["mxbc_data"],
+      "descs_html": [""],
+      "settings": [
+        {
+          "id": "mxbc_data",
+          "name": "蜜雪冰城token",
+          "val": "",
+          "type": "text",
+          "desc": "CK"
+        }
+      ],
+      "icons": [""],
+      "author": "",
+      "repo": "",
+      "scripts": []
+    },
+    {
+      "id": "mxbc_data_Cookie",
+      "name": "爱奇艺",
+      "keys": ["iqiyiCookie"],
+      "descs_html": ["<a href='https://m.iqiyi.com/u/'>跳转登录</a>"],
+      "settings": [
+        {
+          "id": "iqiyiCookie",
+          "name": "爱奇艺cookie",
           "val": "",
           "type": "text",
           "desc": "CK"

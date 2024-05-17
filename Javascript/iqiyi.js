@@ -1,56 +1,32 @@
-//打开 i.meituan.com -> 我的 -> 我的优惠券
+//打开 iqiyi.com -> 我的 -> 会员中心
 //boxjs订阅：https://github.com/NUPIGM/QuanX/raw/main/Boxjs/cookies.boxjs.json
-//修改自chavy
+//^https:\/\/cashier\.iqiyi\.com\/cashier\/cashier\/cashier\.html$
 
-const cookieName = "美团";
-const tokenKey = "meituanCookie";
-const chavy = init();
+const cookieName = "爱奇艺";
+const tokenKey = "iqiyiCookie";
+let chavy = init();
 
 const requrl = $request.url;
 if (
   $request &&
-  $request.method != "OPTIONS" &&
-  requrl.match(/\/mttouch\/page\/magiccard/)
+  requrl.match(/\/cashier\/cashier\/cashier\.html\?s3\=personal\_center\_vip\&/)
 ) {
-  const cookieVal = $request.headers["Cookie"] || $request.headers["cookie"];
-  const token = split(cookieVal)?.token;
-  const userId = split(cookieVal)?.userId;
-  if (token) {
-    chavy.setdata(token, tokenKey);
-    chavy.msg("用户:" + userId, `获取Cookie: 成功`, ``);
+  const CKA = $request.headers["Cookie"] || $request.headers["cookie"];
+  let iQIYI =
+    CKA &&
+    CKA.includes("P00001=") &&
+    CKA.includes("P00003=") &&
+    CKA.includes("__dfp=") &&
+    CKA;
+  if (CKA && iQIYI) {
+    chavy.setdata(iQIYI, tokenKey);
+    chavy.msg(cookieName, `获取Cookie: 成功`, ``);
     console.log("获取Cookie: 成功");
   } else {
     console.log("用户未登录");
   }
 } else {
   console.log("重写地址与脚本不匹配，可能是美团地址变更，联系作者更新。");
-}
-
-function split(str) {
-  // 使用正则表达式匹配键值对，并以分号为分隔符拆分字符串
-  if (typeof str == "string") {
-
-    console.log(typeof str);
-    let cookie = str.split(";");
-    // 初始化一个空的对象，用于存储键值对
-    let jsonObj = {};
-    // 遍历键值对数组
-    cookie.forEach((pair) => {
-      // 使用正则表达式匹配键和值
-      let match = pair.match(/([^=]+)=(.*)/);
-      if (match) {
-        // 将键值对存储到 JSON 对象中
-        let key = match[1].trim();
-        let value = match[2].trim();
-        jsonObj[key] = value;
-      }
-    });
-
-    return jsonObj;
-  } else {
-    console.log("cookie有误")
-    return {}
-  }
 }
 
 function init() {
