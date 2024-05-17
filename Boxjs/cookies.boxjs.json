@@ -114,7 +114,7 @@
       "scripts": []
     },
     {
-      "id": "mxbc_data_Cookie",
+      "id": "iqiyi_Cookie",
       "name": "爱奇艺",
       "keys": ["iqiyiCookie"],
       "descs_html": ["<a href='https://m.iqiyi.com/u/'>跳转登录</a>"],
