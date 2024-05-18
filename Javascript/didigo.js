@@ -5,7 +5,7 @@ const { URLSearchParams } = require("url");
 
 const cookieName = "滴滴出行"
 const cookieKey = "ddgyToken"
-let init = init()
+let NUPIGM = init()
 
 const requrl = $request.url
 if (
@@ -15,7 +15,7 @@ if (
   const token = URLSearchParams(requrl).get("token")
   const userId = URLSearchParams(requrl).get("userId")
   if (token && userId) {
-    init.setdata(userId + "&" + token, cookieKey)
+    NUPIGM.setdata(userId + "&" + token, cookieKey)
     console.log("获取Cookie: 成功");
     init.msg(cookieName, "获取滴滴token:成功", "")
   } else {
@@ -79,5 +79,5 @@ function init() {
   };
   return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, done };
 }
-init.done();
+NUPIGM.done();
 
