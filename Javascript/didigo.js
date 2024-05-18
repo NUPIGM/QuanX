@@ -1,7 +1,6 @@
 //打开支付宝 -> 滴滴出行 -> 我的
 //boxjs订阅：https://github.com/NUPIGM/QuanX/raw/main/Boxjs/cookies.boxjs.json
 
-const { URLSearchParams } = require("url");
 
 const cookieName = "滴滴出行"
 const cookieKey = "ddgyToken"
@@ -12,8 +11,8 @@ if (
   $request &&
   requrl.match(/\/freight\.xiaojukeji\.com\/gateway\?/)
 ) {
-  const token = URLSearchParams(requrl).get("token")
-  const userId = URLSearchParams(requrl).get("userId")
+  const token = parseUrlParams(requrl)["token"]
+  const userId = parseUrlParams(requrl)["userId"]
   if (token && userId) {
     NUPIGM.setdata(userId + "&" + token, cookieKey)
     console.log("获取Cookie: 成功");
@@ -23,6 +22,17 @@ if (
   }
 } else {
   console.log("重写地址与脚本不匹配，可能是美团地址变更，联系作者更新。");
+}
+
+
+// 解析 URL 中的参数
+function parseUrlParams(url) {
+    let params = {};
+    let parser = new URL(url);
+    for (let [key, value] of parser.searchParams.entries()) {
+        params[key] = value;
+    }
+    return params;
 }
 
 
