@@ -16,7 +16,7 @@ if (
   if (token && userId) {
     NUPIGM.setdata(userId + "&" + token, cookieKey)
     console.log("获取Cookie: 成功");
-    init.msg(cookieName, "获取滴滴token:成功", "")
+    NUPIGM.msg(cookieName, "获取滴滴token:成功", "")
   } else {
     console.log("用户未登录");
   }
