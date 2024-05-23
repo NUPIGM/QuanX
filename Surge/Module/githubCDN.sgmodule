@@ -7,10 +7,12 @@
 
 [URL Rewrite]
 
-{{{mode}}}^https?:\/\/raw.raw.githubusercontent.com/(.*) https://{{{proxy}}}/$1 302
+{{{mode}}}^https?:\/\/raw.githubusercontent.com/(.*) https://{{{proxy}}}/$1 302
 
 [Script]
 
 {{{script}}}github加速 = type=http-request,requires-body=0, arguments={{{cdn}}},pattern=^https?:\/\/raw\.githubusercontent\.com,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/githubProxy.js
 
 [MITM]
+
+hostname=  %APPEND% raw.githubusercontent.com
