@@ -1,7 +1,7 @@
 #!name=github加速
 #!desc=选择加速源
 #!category=功能扩展
-#!arguments=rewrite:, proxy:fastraw.ixnic.net, script:, cdn:1, 
+#!arguments=rewrite:"", proxy:fastraw.ixnic.net, script:"", cdn:1, 
 #!arguments-desc=在不使用的模式参数写上 # \n rewrite模式 - proxy：启用重写时的代理域名 \n script模式\tcdn\n1\tfastraw.ixnic.net\n2\thub.incept.pw\n3\traw.gitmirror.com
 #!date=2024年05月23日 22:26:42
 
