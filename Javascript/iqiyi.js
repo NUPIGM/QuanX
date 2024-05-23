@@ -1,6 +1,7 @@
 //打开 iqiyi.com -> 我的 -> 会员中心
 //boxjs订阅：https://github.com/NUPIGM/QuanX/raw/main/Boxjs/cookies.boxjs.json
 //^https:\/\/cashier\.iqiyi\.com\/cashier\/cashier\/cashier\.html$
+//修改自chavy
 
 const cookieName = "爱奇艺";
 const tokenKey = "iqiyiCookie";

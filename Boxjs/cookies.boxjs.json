@@ -1,9 +1,9 @@
 {
-  "id": "mine.cookies",
+  "id": "NUPIGM.cookies",
   "name": "我的签到cookie保存",
-  "author": "@mine",
-  "icon": "",
-  "repo": "https://github.com/",
+  "author": "@NUPIGM",
+  "icon": "https://avatars.githubusercontent.com/u/53999409?v=4",
+  "repo": "https://github.com/NUPIGM/QuanX",
   "onInstall": {
     "title": "安装确认",
     "message": "本订阅包含重写资源, 是否需要自动安装?",
@@ -26,32 +26,32 @@
       "settings": [
         {
           "id": "meituanCookie",
-          "name": "CooKie",
+          "name": "美团cookie",
           "val": "",
           "type": "text",
-          "desc": "CK"
+          "desc": "多账号用&分割"
         }
       ],
-      "icons": [""],
+      "icons": ["https://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:1040877d/favicon-mt.ico"],
       "author": "",
       "repo": "",
       "scripts": []
     },
     {
-      "id": "MMBUY_Cookie",
+      "id": "mmbuy_Cookie",
       "name": "慢慢买",
-      "keys": ["MMBUY"],
+      "keys": ["mmbuy"],
       "descs_html": [""],
       "settings": [
         {
-          "id": "MMBUY",
+          "id": "mmbuy",
           "name": "慢慢买Cookie",
           "val": "",
           "type": "text",
-          "desc": "CK"
+          "desc": "多账号回车分割"
         }
       ],
-      "icons": [""],
+      "icons": ["http://include.manmanbuy.com/images/logo2019.png"],
       "author": "",
       "repo": "",
       "scripts": []

@@ -1,17 +1,17 @@
 #!name=获取cookies
-#!desc=0
+#!desc=获取cookies
+#!category=cookies
 #!arguments=arg:1
-#!arguments-desc=Safari浏览器打开登录 https://home.m.jd.com/myJd/newhome.action 点击"我的"页面\n或者使用旧版网址 https://bean.m.jd.com/bean/signIndex.action  注: 请勿在京东APP内获取!!!
-
+#!arguments-desc=0
 [Script]
 
 获取京东Cookie = type=http-request,requires-body=0,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 获取美团Cookie = type=http-request,requires-body=0,pattern=^https:\/\/i\.meituan\.com\/mttouch\/page\/magiccard$,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/meituan.js
 获取爱奇艺Cookie = type=http-request,requires-body=0,pattern=^https:\/\/cashier\.iqiyi\.com\/cashier\/cashier\/cashier\.html,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/iqiyi.js
 获取GLaDOS_Cookie = type=http-request,requires-body=0, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
-获取蜜雪冰城token = type=http-response,requires-body=0, pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60
-获取滴滴出行token = type=http-response,requires-body=0, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway\?.*\&token=.*\&userId=,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/didigo.js
-
+获取蜜雪冰城token = type=http-request,requires-body=0, pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
+获取滴滴出行token = type=http-request,requires-body=0, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway\?.*\&token=.*\&userId=,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/didigo.js
+获取高德token = type=http-request, requires-body=0,pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 [MITM]
-hostname = %INSERT% ms.jr.jd.com, cashier.iqiyi.com, api.m.jd.com, i.meituan.com, cashier.iqiyi.com, m.client.10010.com, glados.rocks, mxsa.mxbc.net, freight.xiaojukeji.com
+hostname = %APPEND% ms.jr.jd.com, cashier.iqiyi.com, api.m.jd.com, i.meituan.com, cashier.iqiyi.com, m.client.10010.com, glados.rocks, mxsa.mxbc.net, freight.xiaojukeji.com, *.amap.com

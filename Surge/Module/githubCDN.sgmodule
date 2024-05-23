@@ -1,0 +1,16 @@
+#!name=github加速
+#!desc=选择加速源
+#!category=功能扩展
+#!arguments=rewrite:#, script:"", proxy:fastraw.ixnic.net, cdn:1 2 3, 
+#!arguments-desc=数据表概况
+#!date=2024年05月23日 22:26:42
+
+[URL Rewrite]
+
+{{{mode}}}^https?:\/\/raw.raw.githubusercontent.com/(.*) https://{{{proxy}}}/$1 302
+
+[Script]
+
+{{{script}}}github加速 = type=http-request,requires-body=0, arguments={{{cdn}}},pattern=^https?:\/\/raw\.githubusercontent\.com,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/githubProxy.js
+
+[MITM]
