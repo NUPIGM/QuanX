@@ -2,7 +2,7 @@
 #!desc=选择加速源
 #!category=功能扩展
 #!arguments=rewrite:"", proxy:fastraw.ixnic.net, script:"", cdn:1, 
-#!arguments-desc=在不使用的模式参数写上 # \n rewrite模式 - proxy：启用重写时的代理域名 \n script模式\tcdn\n1\tfastraw.ixnic.net\n2\thub.incept.pw\n3\traw.gitmirror.com
+#!arguments-desc= 在不使用的模式参数写上 #\n   rewrite模式 - proxy：  启用重写时的代理域名 \n script模式    cdn\n 1    fastraw.ixnic.net\n 2    hub.incept.pw\n 3    raw.gitmirror.com
 #!date=2024年05月23日 22:26:42
 
 [URL Rewrite]
@@ -11,7 +11,7 @@
 
 [Script]
 
-{{{script}}}github加速 = type=http-request,requires-body=0, arguments={{{cdn}}},pattern=^https?:\/\/raw\.githubusercontent\.com,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/githubProxy.js
+{{{script}}}github加速 = type=http-request,requires-body=0, arguments={{{cdn}}},pattern=^https?:\/\/raw\.githubusercontent\.com,script-path=https://raw.githubusercontent.com/NUPIGM/QuanX/main/Surge/Javascrip/githubProxy.js
 
 [MITM]
 
