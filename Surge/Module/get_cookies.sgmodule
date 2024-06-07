@@ -9,7 +9,7 @@
 获取美团Cookie = type=http-request,requires-body=0,pattern=^https:\/\/i\.meituan\.com\/mttouch\/page\/magiccard$,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/meituan.js
 获取爱奇艺Cookie = type=http-request,requires-body=0,pattern=^https:\/\/cashier\.iqiyi\.com\/cashier\/cashier\/cashier\.html,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/iqiyi.js
 获取GLaDOS_Cookie = type=http-request,requires-body=0, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
-获取蜜雪冰城token = type=http-request,requires-body=1, pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
+蜜雪冰城获取token = type=http-response,  requires-body=1,pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60
 获取滴滴出行token = type=http-request,requires-body=0, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway\?.*\&token=.*\&userId=,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/didigo.js
 获取高德token = type=http-request, requires-body=0,pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
