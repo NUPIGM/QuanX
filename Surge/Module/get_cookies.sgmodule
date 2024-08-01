@@ -12,6 +12,7 @@
 蜜雪冰城获取token = type=http-response,  requires-body=1,pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info, script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=60
 获取滴滴出行token = type=http-request,requires-body=0, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway\?.*\&token=.*\&userId=,script-path=https://github.com/NUPIGM/QuanX/raw/main/Javascript/didigo.js
 获取高德token = type=http-request, requires-body=0,pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+达美乐披萨获取token = type=http-request, requires-body=1,pattern=^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone, script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
 
 [MITM]
-hostname = %APPEND% ms.jr.jd.com, cashier.iqiyi.com, api.m.jd.com, i.meituan.com, cashier.iqiyi.com, m.client.10010.com, glados.rocks, mxsa.mxbc.net, freight.xiaojukeji.com, *.amap.com
+hostname = %APPEND% ms.jr.jd.com, cashier.iqiyi.com, api.m.jd.com, i.meituan.com, cashier.iqiyi.com, m.client.10010.com, glados.rocks, mxsa.mxbc.net, freight.xiaojukeji.com, *.amap.com, game.dominos.com.cn
