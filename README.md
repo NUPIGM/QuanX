@@ -1,8 +1,9 @@
 [薯条🍟大佬github](https://github.com/VirgilClyne)
 
 # Surge
+[高德地图去广告](surge:///install-config?url=https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/amap.sgmodule)
 ## 模块
-[YouTube.Enhance](https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule)
+[YouTube.Enhance](https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule) [导入](surge:///install-config?url=https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule)
 
 [Box js](https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule)
 [故障排除/规则统计](https://github.com/Keywos/rule/raw/main/script/st/surgetool.sgmodule)
