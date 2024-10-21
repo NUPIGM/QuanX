@@ -1,19 +1,14 @@
 [薯条🍟大佬github](https://github.com/VirgilClyne)
 
 # Surge
-[高德地图去广告](surge:///install-config?url=https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/amap.sgmodule)
+[高德地图去广告](surge:///install-module?url=https://github.com/NUPIGM/QuanX/raw/main/Surge/SGmodules/amap.sgmodule)
+[Google 重定向](surge:///install-module?url=https://github.com/NUPIGM/QuanX/raw/main/Surge/SGmodules/Google302.sgmodule)
+[Github加速](surge:///install-module?url=https://raw.githubusercontent.com/NUPIGM/QuanX/main/Surge/SGmodules/githubCDN.sgmodule)
 ## 模块
-[YouTube.Enhance](https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule) [导入](surge:///install-config?url=https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule)
-
+[YouTube.Enhance](surge:///install-module?url=https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule)
 [Box js](https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule)
 [故障排除/规则统计](https://github.com/Keywos/rule/raw/main/script/st/surgetool.sgmodule)
-
 [Script hub](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule)
-
-[Github加速](https://raw.githubusercontent.com/NUPIGM/QuanX/main/Surge/Module/githubCDN.sgmodule)
-
-[Google 重定向](https://github.com/NUPIGM/QuanX/raw/main/Surge/Module/Google302.sgmodule)
-
 [网易云音乐](https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.sgmodule)
 
 
