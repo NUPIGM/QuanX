@@ -1,0 +1,24 @@
+#!name = NovaXNS-DoH-Remote
+#!desc = 使用 NovaXNS DNS-over-HTTPS (DoH)
+
+[General]
+doh-follow-outbound-mode = true
+allow-dns-svcb = false
+dns-server = 119.29.29.29, 223.5.5.5
+encrypted-dns-server = h3://hk.raito.xns.one/@shelf8410/Surge/dns-query, h3://hk.kahkee.xns.one/@shelf8410/Surge/dns-query
+
+[Rule]
+OR,((DOMAIN-SUFFIX,s), (DOMAIN-SUFFIX,idk)),DIRECT
+DOMAIN,hk.raito.xns.one,DIRECT
+DOMAIN,hk.kahkee.xns.one,DIRECT
+
+[Host]
+router.com = 192.168.2.1
+
+[URL Rewrite] 
+#^https?\:\/\/(www\.)?google\.com\/.*\&q\=([^&]*(\.s|\.idk))\&.* https://$2.com 302
+#^https?\:\/\/(www\.)?g\.(com) https://$2.com 302
+
+[MITM]
+#hostname = %APPEND% www.google.com
+

@@ -1,0 +1,10 @@
+#!name = 重写去广告
+#!desc = 本地重写
+
+[URL Rewrite] 
+
+URL-REGEX,^https:\/\/list-app-m\.i4\.cn\/adclickcb\.xhtml$ // Added for: https://list-app-m.i4.cn/adclickcb.xhtml
+URL-REGEX,^https:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml$ // Added for: https://list-app-m.i4.cn/getopfstadinfo.xhtml
+
+[MITM]
+hostname = %APPEND% list-app-m.i4.cn
