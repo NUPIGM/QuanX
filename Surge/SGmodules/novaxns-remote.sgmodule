@@ -5,11 +5,23 @@
 doh-follow-outbound-mode = true
 allow-dns-svcb = false
 dns-server = 119.29.29.29, 223.5.5.5
-encrypted-dns-server = h3://hk.raito.xns.one/@shelf8410/Surge/dns-query, h3://hk.kahkee.xns.one/@shelf8410/Surge/dns-query
+encrypted-dns-server = h3://hk.raito.xns.one/XHN1LxqZBE4/Surge/dns-query, h3://light-basic.xns.my.id/XHN1LxqZBE4/Surge/dns-query, h3://fastly.xns.my.id/XHN1LxqZBE4/Surge/dns-query
 
 [Rule]
 OR,((DOMAIN-SUFFIX,s), (DOMAIN-SUFFIX,idk)),DIRECT
+DOMAIN,light-basic.xns.my.id,DIRECT
+DOMAIN,hk.beta.xns.one,DIRECT
 DOMAIN,hk.raito.xns.one,DIRECT
+DOMAIN,sg.kahkee.xns.one,DIRECT
+DOMAIN,fastly.xns.my.id,DIRECT
+DOMAIN,jp.beta.xns.one,DIRECT
+DOMAIN,jp.kahkee.xns.one,DIRECT
+DOMAIN,us.novaxns.one,DIRECT
+DOMAIN,gcore.novaxns.one,DIRECT
+DOMAIN,bunny.novaxns.one,DIRECT
+DOMAIN,global.novaxns.one,DIRECT
+DOMAIN,hk1.beta.xns.one,DIRECT
+DOMAIN,hk2.beta.xns.one,DIRECT
 DOMAIN,hk.kahkee.xns.one,DIRECT
 
 [Host]
@@ -17,7 +29,12 @@ router.com = 192.168.2.1
 
 [URL Rewrite] 
 #^https?\:\/\/(www\.)?google\.com\/.*\&q\=([^&]*(\.s|\.idk))\&.* https://$2.com 302
-#^https?\:\/\/(www\.)?g\.(com) https://$2.com 302
+#^https?\:\/\/(www.)?g\.(com) https://$2.com 302
+
+[Panel]
+flushDNS = script-name=Flush DNS,update-interval=6000
+[Script]
+Flush DNS = type=generic,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=arrow.clockwise&color=#3d3d5b&server=true,script-update-interval=604800
 
 [MITM]
 #hostname = %APPEND% www.google.com
