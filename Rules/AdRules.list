@@ -1,41 +1,47 @@
-# DOMAIN
-.zguqxf.buzz
-.zgfpro.buzz
-.zgkvfu.buzz
+#[Rule]
+DOMAIN-SUFFIX,zguqxf.buzz,REJECT
+DOMAIN-SUFFIX,zgfpro.buzz,REJECT
+DOMAIN-SUFFIX,zgkvfu.buzz,REJECT
 
-# DOMAIN-SUFFIX
-b17df.txibpfyj.com
-kip.g62gb.com
-aod.cos.tx.xmcdn.com
-rzasy.ydgh0zc.com
-cdn.image-huankouxyz.com
-adapi.izuiyou.com
-wv.inner-active.mobi
-graph.facebook.com
-sf3-fe-tos.pglstatp-toutiao.com
-api-access.pangolin-sdk-toutiao.com
-upos-sz-staticcos.bilivideo.com
-wxsnsdy.wxs.qq.com
-wxsmsdy.video.qq.com
-wxsnsdythumb.wxs.qq.com
-ads-shopping.shouqianba.com
-waapdg.jd.com
-p1-lm.adukwai.com
-cubichost.net
+DOMAIN,b17df.txibpfyj.com,REJECT
+DOMAIN,kip.g62gb.com,REJECT
+DOMAIN,rzasy.ydgh0zc.com,REJECT
+DOMAIN,cdn.image-huankouxyz.com,REJECT
+DOMAIN,adapi.izuiyou.com,REJECT
+DOMAIN,wv.inner-active.mobi,REJECT
+DOMAIN,graph.facebook.com,REJECT
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,upos-sz-staticcos.bilivideo.com,REJECT
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT
+DOMAIN,wxsmsdy.video.qq.com,REJECT
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
+DOMAIN,ads-shopping.shouqianba.com,REJECT
+DOMAIN,waapdg.jd.com,REJECT
+DOMAIN,p1-lm.adukwai.com,REJECT
+DOMAIN,cubichost.net,REJECT
 
-route-stats.dreport.meituan.net
-data-sdk-uuid-report.dreport.meituan.net
-metrics-picture.dreport.meituan.net
-beauty-js-flv.meituan.net
-beauty-hw-flv.meituan.net
-plx.meituan.com
-prism-report-web.dreport.meituan.net
-msp.meituan.com
-catfront.dianping.com
+DOMAIN,route-stats.dreport.meituan.net,REJECT
+DOMAIN,data-sdk-uuid-report.dreport.meituan.net,REJECT
+DOMAIN,metrics-picture.dreport.meituan.net,REJECT
+DOMAIN,beauty-js-flv.meituan.net,REJECT
+DOMAIN,beauty-hw-flv.meituan.net,REJECT
+DOMAIN,plx.meituan.com,REJECT
+DOMAIN,prism-report-web.dreport.meituan.net,REJECT
+DOMAIN,msp.meituan.com,REJECT
+DOMAIN,catfront.dianping.com,REJECT
 
-vcards.metowolf.com
-mlvbdc.live.qcloud.com
-loggw.alipay.com.cn
-datagw-edge.alipay.com
+DOMAIN,vcards.metowolf.com,REJECT
+DOMAIN,mlvbdc.live.qcloud.com,REJECT
 
+DOMAIN,loggw.alipay.com.cn,REJECT
+DOMAIN,datagw-edge.alipay.com,REJECT
 
+DOMAIN,smartad.10010.com,REJECT
+
+DOMAIN,repository.certum.pl,REJECT
+
+DOMAIN,img.meituan.net,REJECT
+DOMAIN,cdn3.magicacid.cn,REJECT
+DOMAIN,adtracker.medproad.com,REJECT
+//DOMAIN,databuried.cloudbirds.cn,REJECT
