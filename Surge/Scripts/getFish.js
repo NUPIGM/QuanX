@@ -1,3 +1,4 @@
+// @ts-nocheck
 var tlist = {
   1: [
     "元旦",
@@ -158,18 +159,18 @@ let dic = {
 /**
  * @param {number} num
  */
-function icon_now(num){
-  if(num<=7 && num>3 ){
-    return "hare"
-  }else if(num<=3 && num>0){
-    return "timer"
-  }else if(num==0){
-    return "gift"
-  }else{
-    return "tortoise"
+function icon_now(num) {
+  if (num <= 7 && num > 3) {
+    return "hare";
+  } else if (num <= 3 && num > 0) {
+    return "timer";
+  } else if (num == 0) {
+    return "gift";
+  } else {
+    return "tortoise";
   }
 }
-// @ts-ignore
+
 $httpClient.get(
   {
     url: "https://60s.viki.moe/v2/moyu?encoding=json",
@@ -178,18 +179,16 @@ $httpClient.get(
       "user-agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
     },
-    timeout:5
+    timeout: 5,
   },
-  // @ts-ignore
-  // @ts-ignore
+
   (error, response, data) => {
-    data = JSON.parse(data)
-    // @ts-ignore
+    data = JSON.parse(data);
+
     $done({
       title: `${data.data.nextHoliday.name}: ${data.data.nextHoliday.duration}天`,
       content: data.data.moyuQuote,
       icon: icon_now(data.data.nextHoliday.duration),
     });
-    // @ts-ignore
   }
 );
