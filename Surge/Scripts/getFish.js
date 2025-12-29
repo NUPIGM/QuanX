@@ -186,7 +186,7 @@ $httpClient.get(
     data = JSON.parse(data)
     // @ts-ignore
     $done({
-      title: `${data.data.nextHoliday.name}:${data.data.nextHoliday.duration}天`,
+      title: `${data.data.nextHoliday.name}: ${data.data.nextHoliday.duration}天`,
       content: data.data.moyuQuote,
       icon: icon_now(data.data.nextHoliday.duration),
     });
