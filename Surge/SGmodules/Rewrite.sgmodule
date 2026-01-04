@@ -1,10 +1,49 @@
 #!name = 重写去广告
 #!desc = 本地重写
 
-[URL Rewrite] 
+[Rule]
+#萤石云视频 🔽
+DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
 
-URL-REGEX,^https:\/\/list-app-m\.i4\.cn\/adclickcb\.xhtml$ // Added for: https://list-app-m.i4.cn/adclickcb.xhtml
-URL-REGEX,^https:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml$ // Added for: https://list-app-m.i4.cn/getopfstadinfo.xhtml
+[URL Rewrite]
+#萤石云视频 🔽
+^https:\/\/api\.ys7\.com\/api\/ads\/v2.* - reject
+^https:\/\/api\.ys7\.com\/v3\/adService\/sdkConfig\/query$ - reject
+^https:\/\/api\.ys7\.com\/api\/ads\/query\/adConfig\?.* - reject
+# 发现 > 直播 > 溯源
+^https:\/\/api\.ys7\.com\/v3\/videoclips\/live\/goodsModule\/query.* - reject
+# 封面
+^https:\/\/api\.ys7\.com\/v3\/ad\/data\/report\/statistics\?.* - reject
+
+
+#爱思助手 🔽
+^https:\/\/list-app-m\.i4\.cn\/adclickcb\.xhtml$ - REJECT-DROP
+^https:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml$ - REJECT-DROP
+
+
+[Body Rewrite]
+# 萤石云视频 🔽
+# 发现 > 萌宠&银龄
+http-response-jq ^https:\/\/api\.ys7\.com\/v3\/videoclips\/ignore_uri\/flow\/data\/list\?.* ".data={}"
+# 商城页面
+http-response-jq ^https:\/\/m\.ys7\.com\/default\/rn-index\?.* ".data["tabs"][].data=[] | .data["page"][].data[].data"
+# 萤粉圈页面
+http-response-jq ^https:\/\/m\.ys7\.com\/smart\-content\-play.* ".data=[]"
+http-response-jq ^https:\/\/m-api\.ezsuperfans\.com\/v2\/smart-content-play\/.* “{}”
+
+# 直播 > 宠物页面
+http-response-jq ^https:\/\/api\.ys7\.com\/v3\/videoclips\/live\/type\/list\/v2.* ".data={}"
+# 知识页面
+http-response-jq ^https:\/\/api\.ys7\.com/v3/videoclips/ignore\_uri\/knowledge\/module\/query.* ".data.moduleList=[] | .data.total=0"
+# 我的页面 > 只显示管理中心
+http-response-jq ^https?\:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station.* ".stationInfo.groupList = [.stationInfo.groupList[0]]"
+# 我的页面 > 用户会员
+http-response-jq ^https?:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/bannerInfo.* ".bannerInfo.list = []"
+# 总配置
+# http-response-jq ^https?:\/\/api.ys7.com\/v3\/configurations\/gray\/info.+ ".grayConfigInfos.83.switchStatus=3"
+
+[Map Local]
+
 
 [MITM]
-hostname = %APPEND% list-app-m.i4.cn
+hostname = %APPEND% list-app-m.i4.cn, api.ys7.com, m.ys7.com, m-api.ezsuperfans.com

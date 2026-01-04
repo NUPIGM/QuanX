@@ -1,3 +1,4 @@
+#[Rule]
 DOMAIN-SUFFIX,moe.gov.cn,DIRECT
 DOMAIN-SUFFIX,neea.edu.cn,DIRECT
 DOMAIN-SUFFIX,ouchn.edu.cn,DIRECT

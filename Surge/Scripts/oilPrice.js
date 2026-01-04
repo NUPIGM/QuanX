@@ -6,10 +6,10 @@ oilPrice = script-name=oilPrice,update-interval=43200
 oilPrice = type=generic,timeout=5,script-path=https://github.com/NUPIGM/QuanX/raw/main/Surge/Scripts/oilPrice.js
 */
 
+//  argument="title=油价信息⬇&location=fujian/fuzhou&type=92,95&isFriendlyTips=true&isShowGold=true";
 const input =
   $argument ||
-  $persistentStore.read("oilPrice") ||
-  "title=油价信息⬇&location=fujian/fuzhou&type=92,95&isFriendlyTips=true&isShowGold=true";
+  $persistentStore.read("oilPrice")
 
 const params = input.split("&");
 let locate = {
@@ -18,7 +18,8 @@ let locate = {
   type: "92,95,98,0",
   icon: "fuelpump.fill",
   isFriendlyTips: true,
-  isShowGold: true,
+  isNotify:true,
+  isShowGold: false,
 };
 
 params.forEach((param) => {
@@ -103,6 +104,11 @@ let oilPrice = new Promise((resolve, reject) => {
           );
           reject("解析油价信息失败, 详情查看日志");
         } else {
+
+          //[TODO] Notice
+          //$persistentStore.write()
+          
+          //正文
           let content = [];
           types.forEach((param) => {
             switch (param) {

@@ -16,11 +16,17 @@ DOMAIN-SUFFIX,lzcdn22.com,direct
 DOMAIN-SUFFIX,lzcdn23.com,direct
 DOMAIN-SUFFIX,lzcdn24.com,direct
 DOMAIN-SUFFIX,lzcdn25.com,direct
-DOMAIN-SUFFIX,lzcdn26.com,direct
-DOMAIN-SUFFIX,lzcdn27.com,direct
-DOMAIN-SUFFIX,lzcdn28.com,direct
-DOMAIN-SUFFIX,lzcdn29.com,direct
-DOMAIN-SUFFIX,lzcdn30.com,direct
+DOMAIN-SUFFIX,v.cdnlz9.com,direct
+DOMAIN-SUFFIX,v.cdnlz10.com,direct
+DOMAIN-SUFFIX,v.cdnlz11.com,direct
+DOMAIN-SUFFIX,v.cdnlz12.com,direct
+DOMAIN-SUFFIX,v.cdnlz22.com,direct
+
+DOMAIN-SUFFIX,lzdown25.com,direct
+DOMAIN-SUFFIX,lzdown26.com,direct
+DOMAIN-SUFFIX,lzdown27.com,direct
+DOMAIN-SUFFIX,lzdown28.com,direct
+DOMAIN-SUFFIX,lzdown29.com,direct
 
 # 非凡资源 ffzy-play 系列，走直连
 DOMAIN-SUFFIX,ffzy-play1.com,direct
