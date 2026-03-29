@@ -1,9 +1,10 @@
 /**
  * Surge 签到脚本
  */
-const Store = $persistentStore.read("Checkin")
-const FakerCookie = Store ? JSON.parse(Store).FakerCheckin : undefined;
-const cookie = $argument || FakerCookie || $done()
+const store = $persistentStore.read("CheckinData") || $persistentStore.write("","CheckinData") //初始化
+store = JSON.parse(store)
+const fakerCookie = store.fakerCheckin ? store.fakerCheckin.cookie : store.fakerCheckin={"cookie":"","updateTime":""}; //不存在就创建
+const cookie = $argument || fakerCookie || $done()
 
 const headers = {
     "new-api-user": "885",
@@ -43,6 +44,14 @@ const board = new Promise((resolve, reject) => {
                 reject("面板失败")
             } else {
                 data = JSON.parse(data);
+                const formatter = new Intl.DateTimeFormat('zh-CN', {
+                month: '2-digit',
+                day: '2-digit'
+                });
+                const time = new Date();
+                //把更新日期写入储存中
+                store.fakerCheckin.updateTime=formatter.format(new Date())
+                $persistentStore.write(JSON.stringify(store),"CheckinData")
                 resolve(data);
             }
         });
@@ -54,7 +63,7 @@ Promise.all([checkin, board]).then(([checkin, board]) => {
         currency: 'USD',
         minimumFractionDigits: 2
     });
-    $notification.post("Faker API 签到", checkin.message, formatter.format((board.data?.quota / 500000)));
+    $notification.post("Faker API 签到", checkin.message + formatter.format(checkin.data?.quota_awarded/500000), formatter.format((board.data?.quota / 500000)));
     console.log(checkin)
     console.log(board)
     $done();
