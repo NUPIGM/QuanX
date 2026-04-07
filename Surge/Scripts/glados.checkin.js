@@ -26,7 +26,7 @@ $httpClient.post(request, function (error, response, data) {
   } else {
     data = JSON.parse(data);
     console.log(data);
-    $notification.post("glados 签到", data.message, data.list[0].change.toFixed(2));
+    $notification.post("glados 签到", data.message, Number(data.list[0].change).toFixed(2));
   }
   $done();
 });
