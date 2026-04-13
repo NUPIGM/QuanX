@@ -8,6 +8,7 @@ DOMAIN,kip.g62gb.com,REJECT
 DOMAIN,rzasy.ydgh0zc.com,REJECT
 DOMAIN,cdn.image-huankouxyz.com,REJECT
 DOMAIN,adapi.izuiyou.com,REJECT
+DOMAIN,mercury-gateway.ixiaochuan.cn,REJECT
 DOMAIN,wv.inner-active.mobi,REJECT
 DOMAIN,graph.facebook.com,REJECT
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
@@ -29,7 +30,6 @@ DOMAIN,plx.meituan.com,REJECT
 DOMAIN,prism-report-web.dreport.meituan.net,REJECT
 DOMAIN,msp.meituan.com,REJECT
 DOMAIN,catfront.dianping.com,REJECT
-DOMAIN,metrics-picture.d.meituan.net,REJECT
 DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
 
 DOMAIN,vcards.metowolf.com,REJECT
@@ -47,3 +47,6 @@ DOMAIN,cdn3.magicacid.cn,REJECT
 DOMAIN,adtracker.medproad.com,REJECT
 
 DOMAIN,api.qttunion.com,REJECT
+DOMAIN,imageadv.ccb.com // Added for: http://imageadv.ccb.com/adpic/nctm/ad/20260206/102016Y131770347603651404.jpg
+
+IP-CIDR,95.161.76.100/31,REJECT // Fuck Telegram
