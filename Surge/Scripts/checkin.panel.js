@@ -8,7 +8,7 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
 });
 // 遍历 store 对象
 Object.entries(store).forEach(([key, value]) => {
-  txt += key + "：" + (value.updateTime == formatter.format(new Date()))+ "/n";
+  txt += key + "：" + (value.updateTime == formatter.format(new Date())?"✅":"❌")+ "\n";
 });
 $done({
   title: "签到状态",
