@@ -11,7 +11,7 @@ Object.entries(store).forEach(([key, value]) => {
   txt += key + "：" + (value.updateTime == formatter.format(new Date()))+ "/n";
 });
 $done({
-  title: 签到状态,
+  title: "签到状态",
   content: txt,
-  icon: checkmark.seal.fill,
+  icon: "checkmark.seal.fill",
 });
