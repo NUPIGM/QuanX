@@ -25,11 +25,24 @@ $httpClient.post(request, function (error, response, data) {
     console.log("签到失败: " + error);
   } else {
     data = JSON.parse(data);
+    writeStatus("gladosCheckin")
     console.log(data);
     $notification.post("glados 签到", data.message, Number(data.list[0].change).toFixed(2));
   }
   $done();
 });
+
+function writeStatus(name) {
+      const formatter = new Intl.DateTimeFormat("zh-CN", {
+        month: "2-digit",
+        day: "2-digit",
+      });
+      //把更新日期写入储存中
+      let store = $persistentStore.read("CheckinData");
+      store = JSON.parse(store);
+      store[name].updateTime = formatter.format(new Date());
+      $persistentStore.write(store, "CheckinData");
+}
 /**
  *
  * @param {string} name 脚本名
