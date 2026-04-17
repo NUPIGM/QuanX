@@ -185,7 +185,7 @@ $httpClient.get(
   (error, response, data) => {
     data = JSON.parse(data);
 
-let d = data;
+let d = data.data;
 let txt = "";
 
 // 标题行
