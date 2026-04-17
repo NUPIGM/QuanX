@@ -185,10 +185,45 @@ $httpClient.get(
   (error, response, data) => {
     data = JSON.parse(data);
 
-    $done({
-      title: `${data.data.nextHoliday.name}: ${data.data.nextHoliday.until}天`,
-      content: data.data.moyuQuote,
-      icon: icon_now(data.data.nextHoliday.until),
-    });
+let d = data;
+let txt = "";
+
+// 标题行
+txt += "📅 " + d.date.gregorian + " " + d.date.weekday + "\n";
+txt += "农历: " + d.date.lunar.monthCN + d.date.lunar.dayCN + " " + d.date.lunar.zodiac + "年\n\n";
+
+// 工作状态
+txt += "状态: " + (d.today.isWorkday ? "工作日" : "") + (d.today.isWeekend ? "周末" : "") + "\n\n";
+
+// 进度条显示
+txt += "周进度:  " + createProgressBar(d.progress.week.percentage) + " " + d.progress.week.percentage + "%\n";
+txt += "月进度:  " + createProgressBar(d.progress.month.percentage) + " " + d.progress.month.percentage + "%\n";
+txt += "年进度:  " + createProgressBar(d.progress.year.percentage) + " " + d.progress.year.percentage + "%\n\n";
+
+// 倒计时
+txt += "距离周末: " + d.countdown.toWeekEnd + "天\n";
+txt += "距离月末: " + d.countdown.toMonthEnd + "天\n";
+txt += "距离年末: " + d.countdown.toYearEnd + "天\n\n";
+
+// 下一个假期
+if (d.nextHoliday) {
+  txt += "下一个假期: " + d.nextHoliday.name + " (" + d.nextHoliday.until + "天)\n\n";
+}
+
+// 摸鱼语录
+txt += "💭 " + d.moyuQuote + "\n";
+
+$done({
+  title: "每日60秒",
+  content: txt,
+  icon: icon_now(data.data.nextHoliday.until)
+});
+
   }
 );
+// 辅助函数：创建进度条
+function createProgressBar(percentage) {
+  const filled = Math.round(percentage / 10);
+  const empty = 10 - filled;
+  return "█".repeat(filled) + "░".repeat(empty);
+}

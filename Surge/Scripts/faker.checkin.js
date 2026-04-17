@@ -47,7 +47,7 @@ const board = new Promise((resolve, reject) => {
       //把更新日期写入储存中
       let store = $persistentStore.read("CheckinData");
       store = JSON.parse(store);
-      store.fakerCheckin.updateTime = formatter.format(new Date());
+      store.fakerclaw.updateTime = formatter.format(new Date());
       $persistentStore.write(store, "CheckinData");
       resolve(data);
     }
