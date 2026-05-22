@@ -242,3 +242,8 @@ DOMAIN,down.csysw.tcdnos.com
 DOMAIN-SUFFIX,zztfly.com
 DOMAIN-SUFFIX,q751.com
 DOMAIN-SUFFIX,eeafj.cn
+DOMAIN-SUFFIX,mintegral.net
+DOMAIN-SUFFIX,xianyugo.com
+DOMAIN,tools.top
+DOMAIN-SUFFIX,hiromu.top
+DOMAIN-SUFFIX,bilivideo.com

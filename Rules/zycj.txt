@@ -70,3 +70,5 @@ DOMAIN-SUFFIX,ffzy17.tv,direct
 DOMAIN-SUFFIX,ffzy18.tv,direct
 DOMAIN-SUFFIX,ffzy19.tv,direct
 DOMAIN-SUFFIX,ffzy20.tv,direct
+
+DOMAIN,v.lzcdn27.com
