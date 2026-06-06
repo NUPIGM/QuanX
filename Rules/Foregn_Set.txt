@@ -176,3 +176,8 @@ DOMAIN-SUFFIX,ecosia.org
 DOMAIN,ifconfig.me
 DOMAIN,ippure.com
 DOMAIN-SUFFIX,seagm.com
+DOMAIN,prodregistryv2.org
+DOMAIN-SUFFIX,crazyegg.com
+DOMAIN-SUFFIX,whatlearn.qzz.io
+DOMAIN-SUFFIX,privacy-center.org
+DOMAIN-SUFFIX,tz.kg

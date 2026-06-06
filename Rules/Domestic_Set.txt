@@ -247,3 +247,5 @@ DOMAIN-SUFFIX,xianyugo.com
 DOMAIN,tools.top
 DOMAIN-SUFFIX,hiromu.top
 DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,hdslb.com

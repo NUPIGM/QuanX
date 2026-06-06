@@ -42,7 +42,6 @@ DOMAIN,smartad.10010.com,REJECT
 
 DOMAIN,repository.certum.pl,REJECT
 
-DOMAIN,img.meituan.net,REJECT
 DOMAIN,cdn3.magicacid.cn,REJECT
 DOMAIN,adtracker.medproad.com,REJECT
 
