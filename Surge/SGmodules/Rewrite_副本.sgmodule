@@ -1,0 +1,15 @@
+#!name = 抓包测试
+#!desc = 本地重写
+
+[Rule]
+
+[URL Rewrite]
+https://api\.ys7\.com/v3/adService/sdkConfig/query -reject
+https://www\.baidu\.com.* -reject
+[Body Rewrite]
+
+[Map Local]
+
+
+[MITM]
+hostname = %APPEND% www.baidu.com

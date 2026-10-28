@@ -1,95 +1,240 @@
-# 王者荣耀
+DOMAIN, 0037d5dfdad7158ccb00d64159de1450.dlied1.cdntips.net
+DOMAIN, 00466e4702563d5cc1e6cb78917a7870.v.smtcdns.net
+DOMAIN, 05a39b66fa5fabc962dac34cdd04e48d.dlied1.cdntips.net
+DOMAIN, 13f33f37e31431ed58577830326b613e.dlied1.cdntips.net
+DOMAIN, 3389d706cc7101b14f573bc763836f59.dlied1.cdntips.net
+DOMAIN, 475e889dabb019ba9db64e6f5abb38b7.dlied1.cdntips.net
+DOMAIN, 4e8911efe2156bbdaf35ba4edf6679fa.dlied1.cdntips.net
+DOMAIN, 538ee4aaefa17024be8b13bab857c60c.dlied1.cdntips.net
+DOMAIN, 66afaf7b60913f17ef4f4352f33b2d2f.dlied1.cdntips.net
+DOMAIN, 7dfdc2b1b6e42b8795787d9bf34f7d2f.dlied1.cdntips.net
+DOMAIN, 87dce5c085f673081754f165783db3a4.dlied1.cdntips.net
+DOMAIN, 9361f9f2a57ea199ff9061bcbcfe18ba.v.smtcdns.net
+DOMAIN, 953c6fe3033ad15978ffc59dcce68eb5.dlied1.cdntips.net
+DOMAIN, 9b5215c71d88547a1e83fdf75a9022e7.dlied1.cdntips.net
+DOMAIN, a55b0833af78f846ba35611b05f088c6.dlied1.cdntips.net
 DOMAIN, access1.tpns.sh.tencent.com
 DOMAIN, apd-pcdniegwzlogin.teg.tencent-cloud.net
 DOMAIN, apd-pcdnvodstat.teg.tencent-cloud.net
+DOMAIN, api-adservices.apple.com
+DOMAIN, api.unipay.qq.com
+DOMAIN, apm3437-4-1258344700.cos.ap-nanjing-dev.myqcloud.com
+DOMAIN, apm3437-5-1258344700.cos.ap-nanjing-dev.myqcloud.com
+DOMAIN, apm3437-9-1258344700.cos.ap-nanjing-dev.myqcloud.com
+DOMAIN, app.ingame.qq.com
+DOMAIN, avatar-cos.kohsocialapp.qq.com
+DOMAIN, c0729298988c8fa93f03d1cd93a39c77.dlied1.cdntips.net
+DOMAIN, cgi.connect.qq.com
+DOMAIN, cloud.tgpa.qq.com
+DOMAIN, cloudctrl.gcloud.qq.com
 DOMAIN, control.mna.qq.com
-DOMAIN, d8bc7212935f290319de7ec197ae1083.v.smtcdns.com
+DOMAIN, d8bc7212935f290319de7ec197ae1083.dlied1.cdntips.net
 DOMAIN, dir.1212338883-2-1.gcloudsvcs.com
+DOMAIN, dlied5.qq.com
+DOMAIN, down-update.qq.com
+DOMAIN, down.anticheatexpert.com
+DOMAIN, down.pandora.qq.com
+DOMAIN, download.2.1212338883.wz.gcloudgbs.com
+DOMAIN, download.nature.qq.com
+DOMAIN, downupdate.bdy.tcdnos.com
+DOMAIN, downupdate.ydcdn.tcdnos.com
+DOMAIN, eac00956a9960d06337be60a4467d5d9.v.smtcdns.net
+DOMAIN, ec385602ef1506412cb1f10c735312e8.dlied1.cdntips.net
+DOMAIN, effb872e380096b62ab99ccb44726670.dlied1.cdntips.net
 DOMAIN, estv-op.tga.qq.com
+DOMAIN, f96c8b6bac436926eb76eaba1f741081.dlied1.cdntips.net
 DOMAIN, faasyxzj.native.qq.com
+DOMAIN, file.myqcloud.com
+DOMAIN, flow.qq.com
 DOMAIN, galileotelemetry.tencent.com
 DOMAIN, game.eve.mdt.qq.com
+DOMAIN, game.str.mdt.qq.com
+DOMAIN, game.weixin.qq.com
+DOMAIN, gss.gcloud.gcloudsdk.com
 DOMAIN, guid.tpns.sh.tencent.com
-DOMAIN, hwmov.a.yximgs.com
+DOMAIN, hc2.tdm.qq.com
+DOMAIN, i0.hdslb.com
+DOMAIN, i2.hdslb.com
+DOMAIN, idcconfig.gcloudsdk.com
+DOMAIN, image.smoba.qq.com
+DOMAIN, img.ssl.msdk.qq.com
+DOMAIN, inappcheck.itunes.apple.com
+DOMAIN, info.zb.video.qq.com
+DOMAIN, ios.crashsight.qq.com
+DOMAIN, ios.perfsight.qq.com
 DOMAIN, iwx.smoba.qq.com
 DOMAIN, jsonatm.broker.tplay.qq.com
 DOMAIN, nj.cschannel.anticheatexpert.com
+DOMAIN, op.tv.kohesport.qq.com
+DOMAIN, oth.eve.mdt.qq.com
+DOMAIN, oth.str.mdt.qq.com
+DOMAIN, p.qlogo.cn
+DOMAIN, p11.douyinpic.com
+DOMAIN, p3.douyinpic.com
+DOMAIN, pandora.bdy.tcdnos.com
+DOMAIN, pop-release.itop.qq.com
+DOMAIN, priv.igame.qq.com
 DOMAIN, prodsgamehub.ecology.smoba.qq.com
+DOMAIN, pvp.ingame.qq.com
+DOMAIN, receiver.tdm.qq.com
+DOMAIN, report.tv.kohesport.qq.com
+DOMAIN, sgame-data-service-1252931805.cos.ap-nanjing.myqcloud.com
 DOMAIN, sgame.itop.qq.com
+DOMAIN, smoba.bdy.tcdnos.com
+DOMAIN, smobatv-pic.tga.qq.com
+DOMAIN, snowflake.qq.com
+DOMAIN, stat.tpns.sh.tencent.com
+DOMAIN, superr.game.qq.com
+DOMAIN, szmg.qq.com
+DOMAIN, tgapic.qq.com
+DOMAIN, thirdqq.qlogo.cn
+DOMAIN, tiem-cdn.qq.com
+DOMAIN, trace.qq.com
+DOMAIN, ttwzavatar.kohsocialapp.qq.com
 DOMAIN, tux.qq.com
+DOMAIN, vv.video.qq.com
+DOMAIN, wx.qlogo.cn
 DOMAIN, yxzj.broker.tplay.qq.com
-IP-CIDR, 0.45.241.84
-IP-CIDR, 0.45.244.16
-IP-CIDR, 0.46.141.48
-IP-CIDR, 0.46.144.180
-IP-CIDR, 0.46.149.0
-IP-CIDR, 0.46.16.248
-IP-CIDR, 0.46.8.196
-IP-CIDR, 101.227.164.167
-IP-CIDR, 101.32.212.148
-IP-CIDR, 101.91.33.120
-IP-CIDR, 101.91.33.63
-IP-CIDR, 109.244.155.169
-IP-CIDR, 109.244.196.186
-IP-CIDR, 109.244.196.8
-IP-CIDR, 109.244.197.5
-IP-CIDR, 109.244.198.198
-IP-CIDR, 109.244.227.224
-IP-CIDR, 109.244.227.77
-IP-CIDR, 109.244.228.0/24
-IP-CIDR, 109.244.244.0/24
-IP-CIDR, 109.244.248.0/24
-IP-CIDR, 112.80.250.116
-IP-CIDR, 112.86.230.159
-IP-CIDR, 113.250.24.152
-IP-CIDR, 116.128.170.140
-IP-CIDR, 116.130.224.112
-IP-CIDR, 117.185.25.64
-IP-CIDR, 117.89.181.34
-IP-CIDR, 122.195.36.148
-IP-CIDR, 122.96.97.22
-IP-CIDR, 122.96.98.16
-IP-CIDR, 122.96.98.17
-IP-CIDR, 139.186.105.36
-IP-CIDR, 140.249.64.121
-IP-CIDR, 153.3.246.144
-IP-CIDR, 153.3.246.150
-IP-CIDR, 157.148.37.0/24
-IP-CIDR, 157.148.39.0/24
-IP-CIDR, 157.148.49.200
-IP-CIDR, 157.255.3.215
-IP-CIDR, 157.255.3.254
-IP-CIDR, 175.24.214.40
-IP-CIDR, 175.27.2.148
-IP-CIDR, 175.27.48.0/24
-IP-CIDR, 175.27.49.172
-IP-CIDR, 175.27.8.142
-IP-CIDR, 180.153.202.85
-IP-CIDR, 182.254.116.120
-IP-CIDR, 203.190.103.0/24
-IP-CIDR, 36.155.189.92
-IP-CIDR, 42.177.82.138
-IP-CIDR, 43.129.255.217
-IP-CIDR, 43.137.146.233
-IP-CIDR, 43.137.148.99
-IP-CIDR, 43.137.157.221
-IP-CIDR, 43.137.157.81
-IP-CIDR, 43.137.165.54
-IP-CIDR, 43.137.168.36
-IP-CIDR, 43.141.130.199
-IP-CIDR, 43.141.156.124
-IP-CIDR, 43.141.17.119
-IP-CIDR, 43.141.19.196
-IP-CIDR, 43.154.240.127
-IP-CIDR, 43.154.240.15
-IP-CIDR, 43.155.124.151
-IP-CIDR, 58.144.132.149
-IP-CIDR, 58.144.132.151
-IP-CIDR, 58.144.162.28
-IP-CIDR, 58.144.162.31
-IP-CIDR, 58.144.193.137
-IP-CIDR, 58.144.206.182
-IP-CIDR, 60.29.239.24
-IP-CIDR, 60.29.239.28
-IP-CIDR, 60.29.247.0/24
-IP-CIDR, 81.69.54.177
+IP-CIDR, 101.226.101.215/32, no-resolve
+IP-CIDR, 101.226.141.142/32, no-resolve
+IP-CIDR, 101.226.96.20/32, no-resolve
+IP-CIDR, 101.227.164.167/32, no-resolve
+IP-CIDR, 101.91.21.27/32, no-resolve
+IP-CIDR, 101.91.33.57/32, no-resolve
+IP-CIDR, 101.91.33.63/32, no-resolve
+IP-CIDR, 109.244.149.167/32, no-resolve
+IP-CIDR, 109.244.155.169/32, no-resolve
+IP-CIDR, 109.244.196.8/32, no-resolve
+IP-CIDR, 109.244.198.198/32, no-resolve
+IP-CIDR, 109.244.227.224/32, no-resolve
+IP-CIDR, 109.244.227.77/32, no-resolve
+IP-CIDR, 109.244.228.0/24, no-resolve
+IP-CIDR, 109.244.244.80/32, no-resolve
+IP-CIDR, 109.244.248.0/24, no-resolve
+IP-CIDR, 110.80.148.3/32, no-resolve
+IP-CIDR, 111.10.17.149/32, no-resolve
+IP-CIDR, 111.161.78.68/32, no-resolve
+IP-CIDR, 111.30.183.207/32, no-resolve
+IP-CIDR, 111.31.240.184/32, no-resolve
+IP-CIDR, 111.32.207.28/32, no-resolve
+IP-CIDR, 111.32.207.39/32, no-resolve
+IP-CIDR, 111.51.150.126/32, no-resolve
+IP-CIDR, 112.17.11.0/24, no-resolve
+IP-CIDR, 112.53.47.72/32, no-resolve
+IP-CIDR, 112.80.183.82/32, no-resolve
+IP-CIDR, 112.80.250.108/32, no-resolve
+IP-CIDR, 112.80.250.116/32, no-resolve
+IP-CIDR, 112.80.251.16/32, no-resolve
+IP-CIDR, 112.80.251.24/32, no-resolve
+IP-CIDR, 113.250.24.152/32, no-resolve
+IP-CIDR, 115.236.128.24/32, no-resolve
+IP-CIDR, 116.128.170.140/32, no-resolve
+IP-CIDR, 116.128.184.236/32, no-resolve
+IP-CIDR, 116.130.224.112/32, no-resolve
+IP-CIDR, 117.135.156.120/32, no-resolve
+IP-CIDR, 117.185.252.74/32, no-resolve
+IP-CIDR, 117.89.181.34/32, no-resolve
+IP-CIDR, 119.147.15.188/32, no-resolve
+IP-CIDR, 120.232.22.152/32, no-resolve
+IP-CIDR, 120.232.22.178/32, no-resolve
+IP-CIDR, 120.232.24.98/32, no-resolve
+IP-CIDR, 120.232.27.228/32, no-resolve
+IP-CIDR, 122.195.36.148/32, no-resolve
+IP-CIDR, 122.195.36.150/32, no-resolve
+IP-CIDR, 122.96.97.22/32, no-resolve
+IP-CIDR, 122.96.98.16/32, no-resolve
+IP-CIDR, 123.125.3.122/32, no-resolve
+IP-CIDR, 123.151.68.158/32, no-resolve
+IP-CIDR, 139.186.105.36/32, no-resolve
+IP-CIDR, 14.22.9.222/32, no-resolve
+IP-CIDR, 140.207.121.72/32, no-resolve
+IP-CIDR, 140.249.64.121/32, no-resolve
+IP-CIDR, 140.249.64.23/32, no-resolve
+IP-CIDR, 153.3.246.144/32, no-resolve
+IP-CIDR, 153.3.246.150/32, no-resolve
+IP-CIDR, 153.3.51.17/32, no-resolve
+IP-CIDR, 153.3.51.39/32, no-resolve
+IP-CIDR, 157.148.45.52/32, no-resolve
+IP-CIDR, 157.148.49.200/32, no-resolve
+IP-CIDR, 157.255.3.215/32, no-resolve
+IP-CIDR, 157.255.3.254/32, no-resolve
+IP-CIDR, 175.24.214.40/32, no-resolve
+IP-CIDR, 175.27.2.148/32, no-resolve
+IP-CIDR, 175.27.48.128/32, no-resolve
+IP-CIDR, 175.27.5.0/24, no-resolve
+IP-CIDR, 175.27.8.142/32, no-resolve
+IP-CIDR, 180.102.111.63/32, no-resolve
+IP-CIDR, 180.102.190.143/32, no-resolve
+IP-CIDR, 180.102.190.29/32, no-resolve
+IP-CIDR, 180.102.58.0/24, no-resolve
+IP-CIDR, 180.102.99.177/32, no-resolve
+IP-CIDR, 180.102.99.178/32, no-resolve
+IP-CIDR, 180.110.152.33/32, no-resolve
+IP-CIDR, 180.153.202.208/32, no-resolve
+IP-CIDR, 180.153.202.49/32, no-resolve
+IP-CIDR, 182.254.116.117/32, no-resolve
+IP-CIDR, 182.254.116.120/32, no-resolve
+IP-CIDR, 183.192.195.116/32, no-resolve
+IP-CIDR, 183.194.190.185/32, no-resolve
+IP-CIDR, 183.194.190.204/32, no-resolve
+IP-CIDR, 183.194.198.91/32, no-resolve
+IP-CIDR, 183.194.207.203/32, no-resolve
+IP-CIDR, 183.194.222.90/32, no-resolve
+IP-CIDR, 183.194.237.42/32, no-resolve
+IP-CIDR, 183.194.237.51/32, no-resolve
+IP-CIDR, 183.204.13.187/32, no-resolve
+IP-CIDR, 203.190.103.0/24, no-resolve
+IP-CIDR, 220.194.120.87/32, no-resolve
+IP-CIDR, 220.196.141.94/32, no-resolve
+IP-CIDR, 220.196.155.46/32, no-resolve
+IP-CIDR, 221.178.13.60/32, no-resolve
+IP-CIDR, 221.181.81.139/32, no-resolve
+IP-CIDR, 222.189.172.0/24, no-resolve
+IP-CIDR, 223.109.112.208/32, no-resolve
+IP-CIDR, 27.152.182.107/32, no-resolve
+IP-CIDR, 27.155.112.58/32, no-resolve
+IP-CIDR, 36.150.225.0/24, no-resolve
+IP-CIDR, 36.153.84.191/32, no-resolve
+IP-CIDR, 36.153.84.30/32, no-resolve
+IP-CIDR, 36.155.163.65/32, no-resolve
+IP-CIDR, 36.155.199.0/24, no-resolve
+IP-CIDR, 36.155.209.52/32, no-resolve
+IP-CIDR, 36.155.213.46/32, no-resolve
+IP-CIDR, 36.155.220.18/32, no-resolve
+IP-CIDR, 36.155.220.20/32, no-resolve
+IP-CIDR, 36.155.223.0/24, no-resolve
+IP-CIDR, 36.155.241.47/32, no-resolve
+IP-CIDR, 36.155.248.11/32, no-resolve
+IP-CIDR, 42.81.179.236/32, no-resolve
+IP-CIDR, 42.81.242.158/32, no-resolve
+IP-CIDR, 42.81.252.201/32, no-resolve
+IP-CIDR, 43.137.146.233/32, no-resolve
+IP-CIDR, 43.137.148.99/32, no-resolve
+IP-CIDR, 43.137.152.229/32, no-resolve
+IP-CIDR, 43.137.153.222/32, no-resolve
+IP-CIDR, 43.137.157.221/32, no-resolve
+IP-CIDR, 43.137.157.81/32, no-resolve
+IP-CIDR, 43.137.165.54/32, no-resolve
+IP-CIDR, 43.137.168.36/32, no-resolve
+IP-CIDR, 43.137.251.61/32, no-resolve
+IP-CIDR, 43.141.110.254/32, no-resolve
+IP-CIDR, 43.141.111.98/32, no-resolve
+IP-CIDR, 43.141.128.15/32, no-resolve
+IP-CIDR, 43.141.129.91/32, no-resolve
+IP-CIDR, 43.141.130.199/32, no-resolve
+IP-CIDR, 43.141.17.119/32, no-resolve
+IP-CIDR, 43.141.29.192/32, no-resolve
+IP-CIDR, 43.141.52.240/32, no-resolve
+IP-CIDR, 43.145.12.35/32, no-resolve
+IP-CIDR, 49.71.127.51/32, no-resolve
+IP-CIDR, 58.144.132.149/32, no-resolve
+IP-CIDR, 58.144.132.152/32, no-resolve
+IP-CIDR, 58.144.162.21/32, no-resolve
+IP-CIDR, 58.144.206.182/32, no-resolve
+IP-CIDR, 58.212.47.248/32, no-resolve
+IP-CIDR, 60.29.239.24/32, no-resolve
+IP-CIDR, 60.29.239.27/32, no-resolve
+IP-CIDR, 60.29.247.154/32, no-resolve
+IP-CIDR, 61.160.255.36/32, no-resolve
+IP-CIDR, 61.160.255.50/32, no-resolve
+IP-CIDR, 81.69.54.177/32, no-resolve

@@ -10,8 +10,8 @@ DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
 ^https:\/\/api\.ys7\.com\/api\/ads\/v2.* - reject
 ^https:\/\/api\.ys7\.com\/v3\/adService\/sdkConfig\/query$ - reject
 ^https:\/\/api\.ys7\.com\/api\/ads\/query\/adConfig\?.* - reject
-# 发现 > 直播 > 溯源
-^https:\/\/api\.ys7\.com\/v3\/videoclips\/live\/goodsModule\/query.* - reject
+# 社区
+^https?:\/\/api\.ys7\.com\/v3\/videoclips\/community\/.* - reject
 # 封面
 ^https:\/\/api\.ys7\.com\/v3\/ad\/data\/report\/statistics\?.* - reject
 
@@ -21,20 +21,12 @@ DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
 ^https:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml$ - REJECT-DROP
 
 
+# > 拼多多
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
+^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
 [Body Rewrite]
 # 萤石云视频 🔽
-# 发现 > 萌宠&银龄
-http-response-jq ^https:\/\/api\.ys7\.com\/v3\/videoclips\/ignore_uri\/flow\/data\/list\?.* ".data={}"
-# 商城页面
-http-response-jq ^https:\/\/m\.ys7\.com\/default\/rn-index\?.* ".data["tabs"][].data=[] | .data["page"][].data[].data"
-# 萤粉圈页面
-http-response-jq ^https:\/\/m\.ys7\.com\/smart\-content\-play.* ".data=[]"
-http-response-jq ^https:\/\/m-api\.ezsuperfans\.com\/v2\/smart-content-play\/.* “{}”
 
-# 直播 > 宠物页面
-http-response-jq ^https:\/\/api\.ys7\.com\/v3\/videoclips\/live\/type\/list\/v2.* ".data={}"
-# 知识页面
-http-response-jq ^https:\/\/api\.ys7\.com/v3/videoclips/ignore\_uri\/knowledge\/module\/query.* ".data.moduleList=[] | .data.total=0"
 # 我的页面 > 只显示管理中心
 http-response-jq ^https?\:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station.* ".stationInfo.groupList = [.stationInfo.groupList[0]]"
 # 我的页面 > 用户会员
@@ -46,4 +38,4 @@ http-response-jq ^https?:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/banne
 
 
 [MITM]
-hostname = %APPEND% list-app-m.i4.cn, api.ys7.com, m.ys7.com, m-api.ezsuperfans.com
+hostname = %APPEND% list-app-m.i4.cn, api.ys7.com, m.ys7.com, m-api.ezsuperfans.com, api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
