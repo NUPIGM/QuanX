@@ -1,0 +1,37 @@
+#!name=驴充充 去广告 & 去追踪
+#!desc=基于「驴充充.har」全量分析：拦截第三方广告 SDK（一点零一/lbbtech）与广告追踪/埋点上报接口。
+#!author=WorkBuddy
+#!category=我的
+
+
+[MITM]
+enable = true
+hostname = %APPEND% appapi.lvcchong.com
+
+[Rule]
+# ── 类别 B：第三方广告 SDK，整域名拒绝 ──
+DOMAIN-SUFFIX,yidianlingyi.cn,REJECT
+DOMAIN-SUFFIX,lbbtech.oss-cn-shenzhen.aliyuncs.com,REJECT
+
+# ── 可选：微信 SDK 遥测上报（进一步去追踪，但可能影响 SDK 稳定性，默认关闭）──
+# DOMAIN-SUFFIX,report-online.sh.wxgateway.com,REJECT
+# DOMAIN-SUFFIX,sh.servicewechat.com,REJECT
+
+[URL Rewrite]
+# ── 类别 A：广告追踪/埋点上报接口，直接 REJECT（请求被丢弃，App 静默忽略）──
+^https?://appapi\.lvcchong\.com/appBaseApi/insertAdvertisementDisplayLimit _ reject
+^https?://appapi\.lvcchong\.com/appBaseApi/setAdvertisementShowAndClickVolume _ reject
+^https?://appapi\.lvcchong\.com/appBaseApi/setLocalLifeShowAndClickVolume _ reject
+^https?://appapi\.lvcchong\.com/lvcc/thirdapi/addBuryingPoint _ reject
+
+[Body Rewrite]
+# 1) 页面广告位（首页轮播 / 钱包横幅 / 个人中心弹窗浮窗 / 在线客服 等）
+#    将每个广告位的 advertisementManageList 置空(null)，与该服务端"无广告"的表示一致，
+#    客户端便无内容可渲染。
+http-response-jq ^https?://appapi\.lvcchong\.com/appBaseApi/getByAdvertisementManage 'if (.data.adList | type) == "array" then .data.adList |= map(.advertisementManageList = null) else . end'
+# 变体：仅去广告、保留"在线客服"入口（取消上面一行注释、启用此行）
+# http-response-jq ^https?://appapi\.lvcchong\.com/appBaseApi/getByAdvertisementManage 'if (.data.adList | type) == "array" then .data.adList |= map(if (.positionName | test("客服")) then . else .advertisementManageList = null end) else . end'
+# 2) 钱包广告
+http-response-jq ^https?://appapi\.lvcchong\.com/appBaseApi/getWalletAdvertisementList 'if (.data | type) == "array" then .data |= map(.advertisementList = []) else . end'
+# 3) 本地生活广告
+http-response-jq ^https?://appapi\.lvcchong\.com/appBaseApi/getLocalLifeAdvertisementList 'if (.data | type) == "array" then .data |= map(.advertisementList = []) else . end'

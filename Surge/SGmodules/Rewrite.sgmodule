@@ -1,20 +1,10 @@
 #!name = 重写去广告
 #!desc = 本地重写
+#!category=我的
 
 [Rule]
-#萤石云视频 🔽
-DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
 
 [URL Rewrite]
-#萤石云视频 🔽
-^https:\/\/api\.ys7\.com\/api\/ads\/v2.* - reject
-^https:\/\/api\.ys7\.com\/v3\/adService\/sdkConfig\/query$ - reject
-^https:\/\/api\.ys7\.com\/api\/ads\/query\/adConfig\?.* - reject
-# 社区
-^https?:\/\/api\.ys7\.com\/v3\/videoclips\/community\/.* - reject
-# 封面
-^https:\/\/api\.ys7\.com\/v3\/ad\/data\/report\/statistics\?.* - reject
-
 
 #爱思助手 🔽
 ^https:\/\/list-app-m\.i4\.cn\/adclickcb\.xhtml$ - REJECT-DROP
@@ -25,14 +15,6 @@ DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
 ^https?:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
 [Body Rewrite]
-# 萤石云视频 🔽
-
-# 我的页面 > 只显示管理中心
-http-response-jq ^https?\:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station.* ".stationInfo.groupList = [.stationInfo.groupList[0]]"
-# 我的页面 > 用户会员
-http-response-jq ^https?:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/bannerInfo.* ".bannerInfo.list = []"
-# 总配置
-# http-response-jq ^https?:\/\/api.ys7.com\/v3\/configurations\/gray\/info.+ ".grayConfigInfos.83.switchStatus=3"
 
 [Map Local]
 
