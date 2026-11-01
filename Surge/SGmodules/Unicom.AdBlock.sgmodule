@@ -1,0 +1,86 @@
+#!name=联通 App 净化（去广告 · 营销位 · 引导气泡）
+#!desc=关闭开屏/弹窗/浮窗/顶部黑条/商城banner/首页营销位，拦截埋点上报；适配 中国联通 13.1.0 (14)
+#!system=ios
+#!category=我的
+#!author=ios-response-forge
+#
+# ┌─ 版本要求（重要）────────────────────────────────────────────┐
+# │ jq Body Rewrite 需要 Surge iOS 5.14.0+ / Mac 5.9.0+          │
+# │ 上面的 #!requirement=CORE_VERSION>=20 只保证 Body Rewrite     │
+# │ 本身可用（iOS 5.10.0+），CORE_VERSION 没有对应 5.14 的档位，  │
+# │ 所以无法在模块里精确表达。低于 5.14 时本模块不会报错，        │
+# │ 但所有 jq 规则会被静默跳过 —— 表现就是「装了没效果」。        │
+# │ 若你低于 5.14，请看 README 的「降级预案」。                   │
+# └──────────────────────────────────────────────────────────────┘
+#
+# 规则编号 / 级别 / 依赖字段 / 失效信号，见 README「拦截清单」与「维护表」。
+# 语法依据：https://manual.nssurge.com/http/body-rewrite.html
+#           https://manual.nssurge.com/http/url-rewrite.html
+#           https://manual.nssurge.com/http/mitm.html
+#           核验日期 2026-11-01
+
+[Body Rewrite]
+
+# ───────── 一、首页广告 ─────────
+# [B1] A级 · 开屏总闸 / 顶部营销黑条 / 角标文案 / 新手引导
+#      依赖：data.kaiPingShowFlag, blackBarOpenFlag, badgeText, userGuidSwitch, guidePage*
+#      失效信号：开屏广告回来、首页顶部又出现滚动黑条
+http-response-jq ^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexCfig/ 'if ((.data? // null)|type)=="object" then (.data.kaiPingShowFlag = "0" | .data.blackBarOpenFlag = false | .data.badgeText = "" | .data.userGuidSwitch = "0" | .data.guidePage13 = false | .data.guidePageOpenFlag = false) else . end'
+
+# [B2] A级 · 首页弹窗活动（响应里 showTab 明确写着「广告」）
+#      依赖：data.popData / data.bannerPopData / data.productH5Url
+#      失效信号：冷启动后弹出全屏活动图
+http-response-jq ^https?://m\.client\.10010\.com/mobileService/activity/homePopUpActivityNew\.htm 'if ((.data? // null)|type)=="object" then (.data.popData = null | .data.bannerPopData = null | .data.productH5Url = null) else . end'
+
+# [B3] A级 · 首页浮窗广告（HomeFusion.fuchuangAdv_A8）
+#      注意：只清 advCntList，保留同响应里的 bottomLabel（底部 Tab 图标靠它）
+#      失效信号：首页右下角出现可拖动的小浮窗
+http-response-jq ^https?://m\.client\.10010\.com/clientIndex/homefusion/fuInter 'if (type=="object" and has("HomeFusion.fuchuangAdv_A8")) then .["HomeFusion.fuchuangAdv_A8"].advCntList = [] else . end'
+
+# [B4] A级 · 首页营销位（上/下推荐位）—— 优先用服务端自带的 hidden 开关
+#      依赖：data.hiddenTop / data.hiddenBottom / data.topList / data.bottomList
+#      失效信号：首页出现「联通魔方/流量放心用」这类横滑推荐条
+http-response-jq ^https?://m\.client\.10010\.com/mobileserviceNine/api/v1/homeService/getServiceHomeMarketingBits 'if ((.data? // null)|type)=="object" then (.data.hiddenTop = true | .data.hiddenBottom = true | .data.topList = [] | .data.bottomList = []) else . end'
+
+# [B5] A级 · 首页「专属优惠」模块
+#      依赖：data.left / data.right / data.largeMarket
+#      失效信号：首页出现「存100元得」「享优惠」双列卡片
+http-response-jq ^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexExclusiveOffers/ 'if ((.data? // null)|type)=="object" then (.data.left = [] | .data.right = [] | .data.largeMarket = []) else . end'
+
+# [B6] A级 · 首页 OMO 活动位（语音包超市等）
+#      依赖：data.listOMOInfo
+#      失效信号：首页出现「语音包超市 低至0.1元/分钟」
+http-response-jq ^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryOMO/ 'if ((.data? // null)|type)=="object" then (.data.listOMOInfo = [] | .data.deviceBlackShowFlag = false) else . end'
+
+# [B8] A级 · 商城首页顶部 banner
+#      依赖：data.url / data.goodsUrl
+#      失效信号：联通商城首页顶部轮播推广图回归
+#      说明：不影响下方金刚区与商品列表
+http-response-jq ^https?://card\.10010\.com/mall-access/homePage/v25/topBanner 'if type=="object" then .data = {} else . end'
+
+# [B7] A级 · 首页瀑布流「纯图片推广卡」（templateType = CJDD00D0001，本包 14 张）
+#      ⚠ 默认关闭：过滤数组元素可能造成翻页错位/空位（见 README §风险）
+#      想启用就把下一行开头的 # 去掉（只去一个 #，不要动 http-response-jq）
+#http-response-jq ^https?://m\.client\.10010\.com/clientIndex/api/v1/index/queryIndexWaterfall/ 'if (((.data? | .liuCeDto? | .pageList?) // null)|type)=="array" then .data.liuCeDto.pageList |= map(select((.data.templateType // "") != "CJDD00D0001")) else . end'
+
+[URL Rewrite]
+
+# ───────── 二、埋点与第三方广告 SDK（不影响任何展示） ─────────
+# [U1] A级 · smartad 曝光/点击日志（本包 32 条）
+^https?://smartad\.10010\.com/msupport/count/ _ reject
+
+# [U2] A级 · 巨量引擎 AppLog 上报（本包 4 条）
+^https?://mssdk\.volces\.com/ri/report_otob _ reject
+
+# [U3] A级 · 巨量引擎域名单拉取
+^https?://tnc3-alisc1\.zijieapi\.com/get_domains/ _ reject
+
+# [U4] A级 · 穿山甲试玩广告组件资源
+^https?://lf-cdn-tos\.bytescm\.com/obj/static/ad/ _ reject
+
+# [U5] A级 · 联通自有埋点通道 playback（本包 50 条）
+#      只拦上报，不拦 initMobileApp / getMobileRedirectHost（那两个是业务初始化）
+^https?://playback\.newbuy\.chinaunicom\.cn/(action|dcnew/webinsight/|tyappdc/uploadMobileData) _ reject
+
+[MITM]
+hostname = %APPEND% m.client.10010.com, card.10010.com, smartad.10010.com, mssdk.volces.com, tnc3-alisc1.zijieapi.com, lf-cdn-tos.bytescm.com, playback.newbuy.chinaunicom.cn

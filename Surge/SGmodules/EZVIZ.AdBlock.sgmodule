@@ -1,0 +1,142 @@
+#!name=萤石云视频 去广告
+#!desc=合并 EZVIZ.AdBlock 与 YS7 AdBlock：广告字段改写 + 素材 Mock + 广告域拦截 + 界面裁剪；适配萤石云视频 7.9.5 (2914185)
+#!system=ios
+#!category=我的
+#!author=WorkBuddy
+#!version=2.1
+
+
+# ── 一、[Rule] 连接层域名拦截（不依赖 MITM 与证书）──────────────────────────
+
+[Rule]
+
+# 抓包实证的广告域
+# [D1] 阿里妈妈 RTB 竞价成功回传（开屏 adxType=ADX_MEISHU）[1]
+DOMAIN-SUFFIX,rtb.julang.taobao.com,REJECT
+# [D2] 字节 mscc 广告 SDK 配置与上报（火山引擎）[2]
+DOMAIN-SUFFIX,mssdk.volces.com,REJECT
+# [D3] 字节 TNC 域名调度（App 内仅广告 SDK 使用）[1]
+DOMAIN-SUFFIX,tnc3-alisc1.zijieapi.com,REJECT
+
+# 萤石自有域整域拦（本次确认保留）
+# [D4] 代价：[B4] 的 icons 数组清空永不执行；底部 Tab 若出现灰色占位，改启用 [B4]
+DOMAIN,ecapi-flood.ys7.com,REJECT-DROP
+# [D5] 会一并丢掉非广告上报；排查「设备状态不同步 / 消息延迟」时先注释本条
+DOMAIN,log.ys7.com,REJECT-DROP
+# [D6] 统计域
+DOMAIN,stats.ys7.com,REJECT-DROP
+# [D7] 网易 AB / 七鱼 SDK 上报
+DOMAIN,abt-online.netease.im,REJECT-DROP
+
+# 通用广告 SDK 域（无 HAR 证据，仅 SDK 文档）。App 或系统代理异常时先整段注释做二分。
+# [D8] 穿山甲（Pangle / 巨量）
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,ad.oceanengine.com,REJECT
+# [D9] 优量汇（腾讯广点通）
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+# [D10] 百度百青藤
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
+# [D11] Sigmob
+DOMAIN-SUFFIX,sigmob.com,REJECT
+DOMAIN-SUFFIX,sigmob.cn,REJECT
+# [D12] Mintegral
+DOMAIN-SUFFIX,mintegral.com,REJECT
+
+# [D13] 360 搜索，推广落地页跳转目标；App 内若用到 360 网页会白屏，故默认关闭
+# DOMAIN,www.so.com,REJECT-DROP
+
+
+# ── 二、[URL Rewrite] 请求层拦截（上报类接口最安全，客户端不会重试业务请求）──
+
+[URL Rewrite]
+
+# [U1] 广告曝光 / 点击回传（新版通道）[3]。已被 [U4] 涵盖，保留以标明证据来源
+^https?://api\.ys7\.com/v3/ad/data/report/statistics _ reject
+
+# [U2] 阿里妈妈点击追踪 [1]。wcp.taobao.com 是阿里通用域，故只拦 adstrack 路径
+^https?://wcp\.taobao\.com/adstrack/ _ reject
+
+# [U3] 社区模块。B 原写 "- reject"（横线）SyntaxError 被当普通参数吞掉，此处修正为 "_ reject"
+^https?:\/\/api\.ys7\.com\/v3\/videoclips\/community\/.* _ reject
+
+# [U4] 广告数据服务整段（广告位、开屏提醒、应用列表）
+#      A 仅对 report 有实证，其余接口无可改写的响应结构依据，故用 reject
+#      广告位出现灰块或弹窗残留时，先注释本条改用字段改写
+^https?://api\.ys7\.com/v3/ad/.* _ reject
+
+# [U5] 备用：A 原 log.ys7.com 精确规则，因 [D5] 整域拦而失效，留档
+#      启用需注释 [D5]，并把 log.ys7.com 加回 [MITM]
+# ^https?://log\.ys7\.com/statistics\.do\?.*systemName=ad_show _ reject
+
+# [U6] 备用：B 原 /api/ads/* 整段 reject，与 [B1][B2] 的改写互斥（reject 在请求阶段生效）
+#      仅当改写全部失效、广告照旧时临时启用
+# ^https?://api\.ys7\.com/api/ads/.* _ reject
+
+
+# ── 三、[Body Rewrite] 响应改写（核心：决定有没有广告可显示）───────────────
+
+[Body Rewrite]
+
+# [B1] 主广告接口 [4]：一次调用同时承载开屏(slot 3 / adPositionCode=103)与信息流(slot 2)
+#      旧版 {ad:[...]} 与新版 {adRtbInfo:{...}} 两种结构都覆盖
+#      |arrays / |objects 是类型守卫：字段不存在自动跳过，不凭空新增键
+#      adYsFlag / adThirdFlag = 自有 / 第三方广告总开关
+http-response-jq ^https?://api\.ys7\.com/api/ads/v2(\?|$) (.ad|arrays)=[]|(.adRtbInfo.adsMap|objects)={}|(.adRtbInfo.adDefaultInfo|objects)=null|.adYsFlag=0|.adThirdFlag=0
+
+# [B2] 广告位开关 [3]：rockFlag=1 即「摇一摇」感应广告，误触跳转的主因
+http-response-jq ^https?://api\.ys7\.com/api/ads/query/adConfig .configInfo.adYsFlag=0|.configInfo.adThirdFlag=0|.configInfo.rockFlag=0
+
+# [B3] 广告 SDK 配置 [1]：关总闸，并把开屏时长与重启间隔归零
+#      configInfo 是 JSON 字符串，必须 fromjson 改完再 tojson 塞回（未知字段会保留）
+#      边界：若下发 null / 非字符串，fromjson 报错后 Surge 保留原 body，本条失效但不崩
+http-response-jq ^https?://api\.ys7\.com/v3/adService/sdkConfig/query .sdkConfigVoList|=map(.configInfo|=(fromjson|.adYSSwitch=false|.adThirdSwitch=false|.openScreenDuring=0|.adPreRestartHours=0|tojson))
+
+# [B4] 备用：底部 Tab 广告角标（素材走 mfs.ys7.com，只能清空数组消除）
+#      写 .=[] 而非裸 []，避免个别版本把空集合当空输出而保留原 body
+#      启用需注释 [D4]（ecapi-flood 已留在 MITM 内，无需另改）
+# http-response-jq ^https?://ecapi-flood\.ys7\.com/v1/ad/icons .= []
+
+# [B5] 按空间下发的广告位内容（首页 / 设备页广告注入点）
+http-response-jq ^https?://api\.ys7\.com/v3/clouds/cloudbiz/getAdvertisingBySpaceId (.advertising.advertisingDetailList|arrays)=[]
+
+# [B6] 入口 banner（会员升级等运营提示）
+http-response-jq ^https?://api\.ys7\.com/v3/config/service/entrance/bannerInfo (.bannerInfo.list|arrays)=[]
+
+# [B7] 「我的」页只保留管理中心
+#      B 原写法 .groupList=[.groupList[0]] 有两个坑：空数组产出 [null]（页面崩）、
+#      字段缺失时凭空写一个 null 键
+#      改用类型守卫 + 切片：非数组整条跳过，空数组返回 []，不产生 null 元素
+http-response-jq ^https?:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station.* (.stationInfo.groupList|arrays)=.stationInfo.groupList[0:1]
+
+# [B8] 商城主页 Tab
+http-response-jq ^https?://m\.ys7\.com/default/rn-index\?.* .data.tabs.[].tagName="1"|.data.page.[].data=[{},{}]|.data.tabs.[].data=[{},{}]
+
+# [B9] 信息流瀑布流 Tab
+#      [B8][B9] 把页面数据置为 [{},{}] 而非 []，是避开个别版本「空数组→渲染空状态页」的兜底
+http-response-jq ^https?://m\.ys7\.com/default/index-waterfall-tab-list\?.* .data.tabs.[].tagName="2"|.data.page.[].data=[{},{}]|.data.tabs.[].data=[{},{}]
+
+# [B10] 备用：灰度总配置。jq 数字键必须加引号，原写法 .grayConfigInfos.83 无效
+# http-response-jq ^https?://api\.ys7\.com/v3/configurations/gray/info.+ .grayConfigInfos."83".switchStatus=3
+
+
+# ── 四、[Map Local] 广告素材兜底 ────────────────────────────────────────────
+#  3.1 生效后 App 通常不再取素材；这两条防「数据走本地缓存但素材仍在拉」。
+#  返回 1px GIF 比 404 温和，不触发重试、不显示灰块。
+
+[Map Local]
+
+# [M1] 萤石自有广告素材 CDN（该域只服务 /ad/material/）[3]
+^https?://ad-material\.ys7\.com/ data-type=tiny-gif status-code=200
+
+# [M2] 阿里妈妈 AIGC 广告创意素材（开屏图来源之一）[1]
+^https?://qh-material\.taobao\.com/ data-type=tiny-gif status-code=200
+
+
+# ── 五、[MITM] ──────────────────────────────────────────────────────────────
+#  只放需解密的域；整域拦截的域不进这里。log.ys7.com 因 [D5] 已移出，
+#  ecapi-flood 保留供 [B4] 备用时直接启用。
+
+[MITM]
+hostname = %APPEND% api.ys7.com, m.ys7.com, ecapi-flood.ys7.com, ad-material.ys7.com, qh-material.taobao.com, wcp.taobao.com
